@@ -1,0 +1,251 @@
+@extends('layouts.app')
+
+@section('content')
+<div id="kitchen-board" class="container-fluid">
+    <h1 class="mb-3">Panel Cocina</h1>
+
+    <div class="row">
+        <style>
+            /* Minimalista tipo Foto 1: filas separadas, botones compactos y apariencia limpia */
+            .container-fluid > .row { display: flex; gap: 1rem; align-items: flex-start; }
+            .kds-column { flex: 0 0 32%; min-width: 280px; max-width: 32%; border-left: none; }
+            .kds-column-header { font-size: 1rem; padding: .5rem .75rem; line-height:1; background:transparent; color:inherit }
+            .kds-column-body { display:flex; flex-direction: column; gap: 0; padding: 0; }
+
+            /* Cada orden se muestra como una fila horizontal, con borde inferior tipo lista */
+            .kds-card {
+                display:flex;
+                flex-direction:row;
+                align-items:center;
+                gap: .75rem;
+                background: transparent;
+                border-radius: 0;
+                border: 0;
+                border-bottom: 1px solid rgba(0,0,0,0.08);
+                padding: 10px 12px;
+                min-height: 56px;
+                font-size: .98rem;
+                color: #111;
+            }
+
+            /* Cabecera compacta a la izquierda: id y mesa */
+            .kds-card-head { background: transparent; padding: 0; min-width: 140px; max-width: 180px; }
+            .kds-card-head .small.text-muted { font-size: .8rem; color: rgba(0,0,0,0.5); }
+            .kds-card-head .fw-bold { font-size: 1.05rem; margin-top:2px; }
+
+            /* Preview y items en el centro: lista compacta de nombres */
+            .kds-card-body { padding: 0; flex:1; display:flex; flex-direction:column; gap:2px; overflow:visible; }
+            .kds-card-preview { font-size:.9rem; color: rgba(0,0,0,0.65); }
+            .kds-item { display:flex; justify-content:space-between; align-items:flex-start; padding:0; margin:0; }
+            .kds-item-left .fw-bold { font-size: 1rem; font-weight:600; }
+            .kds-item-comment { font-size:.85rem; color: rgba(0,0,0,0.55); margin-top:2px; }
+            .kds-item-right { font-size:.9rem; color: rgba(0,0,0,0.6); margin-left:.6rem; }
+
+            /* Acciones compactas a la derecha, con botones pequeños y discretos */
+            .kds-card-footer { padding:0; min-width:120px; display:flex; gap:.5rem; justify-content:flex-end; }
+            .kds-card-footer .btn, .quick-status-btn { min-width:72px; padding:.35rem .6rem; font-size:.82rem; border-radius:6px; }
+            .kds-card-footer .btn-outline-secondary { color:#333; border-color: rgba(0,0,0,0.08); }
+
+            /* Estado ready as badge small */
+            .kds-card-footer .badge { font-size:.75rem; padding:.35rem .45rem; }
+
+            /* Collapsed behavior: keep layout but hide long comment text */
+            .kds-card.collapsed .kds-item-comment { display:none; }
+
+            /* Responsive: en pantallas pequeñas convertir columnas en filas apiladas */
+            @media (max-width: 992px) {
+                .container-fluid > .row { flex-wrap: wrap; }
+                .kds-column { max-width: 100%; min-width: 0; }
+                .kds-card { min-height:48px; padding:8px 10px; }
+                .kds-card-head { min-width: 110px; max-width: 140px; }
+            }
+
+            /* Forzar overrides frente a Bootstrap card/shadow styles: minimalista limpio */
+            #kitchen-board .row > .col-md-4 { flex: 0 0 32% !important; max-width: 32% !important; padding: 0 .5rem; }
+            #kitchen-board .kds-column { background: transparent !important; border-left: none !important; }
+            /* Elimina fondo, redondeo y sombra generados por clases auxiliares */
+            #kitchen-board .kds-card { background: transparent !important; box-shadow: none !important; border-radius: 0 !important; border: 0 !important; padding: 8px 12px !important; margin: 0 !important; }
+            #kitchen-board .kds-card.mb-2 { margin-bottom: 0 !important; }
+            #kitchen-board .kds-column-body { padding: 0 6px !important; }
+            #kitchen-board .kds-card-head, #kitchen-board .kds-card-body, #kitchen-board .kds-card-footer { padding: 0 !important; }
+            /* mantener preview en una línea para aspecto minimalista */
+            #kitchen-board .kds-card-preview { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            /* ajustes tipográficos finos */
+            #kitchen-board .kds-item .fw-bold { font-size: .95rem; }
+            #kitchen-board .kds-item-comment { font-size: .82rem; }
+            #kitchen-board .kds-card-footer { gap: .35rem !important; min-width: 100px; }
+            /* quitar sombras aplicadas por utilidades */
+            #kitchen-board .shadow-sm { box-shadow: none !important; }
+        </style>
+        @php
+            // Map internal statuses to user-facing Spanish labels
+            $cols = ['waiting' => 'En cola', 'preparing' => 'En proceso', 'ready' => 'Lista'];
+            $colors = ['waiting' => 'bg-secondary', 'preparing' => 'bg-warning', 'ready' => 'bg-success'];
+        @endphp
+
+        @foreach($cols as $statusKey => $label)
+            <div class="col-md-4">
+                <div class="kds-column mb-3">
+                    <div class="kds-column-header {{ $colors[$statusKey] }} text-white p-2">
+                        <strong>{{ $label }}</strong>
+                        <span class="float-end small text-white-50">@php echo ($ordersByStatus[$statusKey] ?? collect())->count(); @endphp</span>
+                    </div>
+                    <div class="kds-column-body" style="min-height:60vh; overflow:auto; padding:8px;">
+                        @forelse(($ordersByStatus[$statusKey] ?? []) as $o)
+                            {{-- show full order by default (not collapsed) so comments and all items are visible; keep action buttons intact --}}
+                            <div class="kds-card mb-2 shadow-sm status-{{ $statusKey }}" data-order-id="{{ $o->orderID }}">
+                                <div class="kds-card-head clickable d-flex justify-content-between align-items-start p-2" role="button" tabindex="0">
+                                    <div>
+                                        <div class="small text-muted">#{{ $o->orderID }} — {{ $o->order_date }}</div>
+                                        <div class="fw-bold">Mesa: {{ trim((string)($o->customer_table ?? '')) !== '' ? $o->customer_table : 'N/A' }}</div>
+                                    </div>
+                                    <div class="text-end">
+                                        <div class="small">Total</div>
+                                        <div class="fw-bold">{{ number_format($o->total,2) }}</div>
+                                    </div>
+                                </div>
+
+                                {{-- compact preview shows first 1-2 items as a single line, like the mesero view --}}
+                                <div class="kds-card-preview px-2 py-1 small text-muted">
+                                    @php $preview = $o->items->take(2); @endphp
+                                    @foreach($preview as $pit)
+                                        <span class="me-2">{{ $pit->menuItemName }} x{{ $pit->quantity }}</span>
+                                    @endforeach
+                                    @if($o->items->count() > 2)
+                                        <span>+{{ $o->items->count()-2 }} more</span>
+                                    @endif
+                                </div>
+
+                                <div class="kds-card-body p-2">
+                                    @foreach($o->items as $it)
+                                        <div class="kds-item d-flex justify-content-between align-items-start py-1 px-2 mb-2">
+                                            <div class="kds-item-left">
+                                                <div class="fw-bold">{{ $it->menuItemName }}</div>
+                                                        @if($it->comment)
+                                                            <div class="kds-item-comment">{{ $it->comment }}</div>
+                                                        @endif
+                                            </div>
+                                            <div class="kds-item-right text-muted">x{{ $it->quantity }}</div>
+                                        </div>
+                                    @endforeach
+                                </div>
+
+                                <div class="kds-card-footer p-2 text-center">
+                                    <a href="{{ route('staff.orders.show', $o->orderID) }}" class="btn btn-sm btn-outline-secondary me-1">Ver</a>
+                                    @if($statusKey == 'waiting')
+                                        <form method="POST" action="{{ route('staff.orders.status', $o->orderID) }}" class="d-inline quick-status-form">
+                                            @csrf
+                                            <input type="hidden" name="origin" value="kitchen">
+                                            <input type="hidden" name="status" value="preparing">
+                                            <button class="btn btn-sm btn-primary quick-status-btn" type="submit">DOING</button>
+                                        </form>
+                                    @elseif($statusKey == 'preparing')
+                                        <form method="POST" action="{{ route('staff.orders.status', $o->orderID) }}" class="d-inline quick-status-form">
+                                            @csrf
+                                            <input type="hidden" name="origin" value="kitchen">
+                                            <input type="hidden" name="status" value="ready">
+                                            <button class="btn btn-sm btn-success quick-status-btn" type="submit">DONE</button>
+                                        </form>
+                                    @else
+                                        <span class="badge bg-success">LISTA</span>
+                                        {{-- Limpiar: when the customer left and everything is done, mark order as cleaned so it disappears from KDS --}}
+                                        <form method="POST" action="{{ route('staff.orders.status', $o->orderID) }}" class="d-inline quick-status-form ms-2 clean-form">
+                                            @csrf
+                                            <input type="hidden" name="origin" value="kitchen">
+                                            <input type="hidden" name="status" value="cleaned">
+                                            <button class="btn btn-sm btn-outline-danger quick-status-btn" type="submit">Limpiar</button>
+                                        </form>
+                                    @endif
+                                </div>
+                            </div>
+                        @empty
+                            <div class="text-muted">No hay órdenes</div>
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</div>
+@endsection
+
+@push('scripts')
+<script>
+// NOTE: automatic full-page polling removed to avoid interfering with interactive admin workflows.
+// intercept quick status forms to use AJAX and update the board without full reload
+document.addEventListener('click', function(e){
+    const btn = e.target.closest('.quick-status-btn');
+    if(!btn) return;
+    e.preventDefault();
+    const form = btn.closest('form');
+    if(!form) return;
+
+    // if this is a clean action, ask for confirmation
+    const statusInput = form.querySelector('input[name="status"]');
+    if(statusInput && statusInput.value === 'cleaned'){
+        if(!confirm('¿Confirmas limpiar esta orden? Esto la quitará del panel de cocina.')) return;
+    }
+
+    const url = form.action;
+    const formData = new FormData(form);
+
+    fetch(url, {
+        method: 'POST',
+        body: formData,
+        credentials: 'same-origin',
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    }).then(r=>r.json()).then(data=>{
+        // find the card element and remove it from the current column (we'll let auto-refresh bring the updated card into place)
+        const card = form.closest('.kds-card');
+        if(card){ card.remove(); }
+        // optionally show a small toast
+        console.log('Order updated', data);
+    }).catch(err=>{ console.error('Status update failed', err); alert('Error al actualizar estado'); });
+});
+
+// toggle expand/collapse on card header click, avoid toggling when clicking buttons/links
+document.addEventListener('click', function(e){
+    const head = e.target.closest('.kds-card-head');
+    if(!head) return;
+    // ignore clicks on interactive elements inside header
+    if(e.target.closest('button,a,form')) return;
+    const card = head.closest('.kds-card');
+    if(!card) return;
+    card.classList.toggle('collapsed');
+});
+
+// keyboard accessibility: toggle on Enter/Space when header focused
+document.addEventListener('keydown', function(e){
+    if(e.key !== 'Enter' && e.key !== ' ') return;
+    const el = document.activeElement;
+    if(!el || !el.classList.contains('kds-card-head')) return;
+    const card = el.closest('.kds-card');
+    if(card) { card.classList.toggle('collapsed'); e.preventDefault(); }
+});
+
+// polling: refresh the kitchen board every 3s unless the user is interacting inside it
+(function(){
+    const selector = '#kitchen-board';
+    // refresh every 2000ms so kitchen panel stays up-to-date
+    const intervalMs = 2000;
+    async function refreshKitchen(){
+        try{
+            const res = await fetch(window.location.href, { credentials: 'same-origin' });
+            const text = await res.text();
+            const doc = new DOMParser().parseFromString(text, 'text/html');
+            const newBoard = doc.querySelector(selector);
+            const oldBoard = document.querySelector(selector);
+            if(!newBoard || !oldBoard) return;
+            const active = document.activeElement;
+            if(oldBoard.contains(active)) return; // don't replace while user interacting
+            // Respect global flag set by edit pages to avoid replacing DOM while typing comments
+            try{ if(window.__basketInputHasFocus) return; }catch(e){ }
+            oldBoard.replaceWith(newBoard);
+        }catch(e){ console.debug('Kitchen refresh error', e); }
+    }
+    setTimeout(()=> setInterval(refreshKitchen, intervalMs), 500);
+})();
+</script>
+@endpush

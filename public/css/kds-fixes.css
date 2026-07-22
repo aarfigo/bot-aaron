@@ -1,0 +1,214 @@
+/* Restored neutral KDS CSS approximating the original look prior to heavy theme changes.
+   This file intentionally keeps styles light and compatible with Bootstrap/Tailwind.
+*/
+body { background: #ffffff; color: #0b1724; }
+.card { background: #ffffff; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 1px 4px rgba(2,6,23,0.04); border-radius: 6px; }
+.card-header { background: transparent; border-bottom: 1px solid rgba(0,0,0,0.04); }
+.btn { border-radius: 6px; }
+.table td, .table th { padding: 0.6rem 0.8rem; }
+#products-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
+@media(min-width:768px){ #products-list{ grid-template-columns: repeat(4,1fr); } }
+.btn .visually-hidden, .btn .sr-only { position: static !important; clip: auto !important; width: auto !important; height: auto !important; overflow: visible !important; }
+* { background-image: none !important; }
+.qty-badge { background: #0d6efd !important; color: #fff !important; }
+.fw-bold { font-weight: 700; }
+/* Minimal neutral overrides to restore a pleasant, Bootstrap/Tailwind-friendly UI
+   This file is intentionally lightweight: it avoids heavy color/background changes
+   and restores default card/table/button appearances so the app looks like before.
+*/
+
+/* Keep body neutral */
+body { background: #ffffff; color: #0b1724; }
+
+/* Cards: subtle border, minimal shadow */
+.card { background: #ffffff; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 1px 4px rgba(2,6,23,0.04); border-radius: 6px; }
+.card-header { background: transparent; border-bottom: 1px solid rgba(0,0,0,0.04); }
+
+/* Buttons: use bootstrap defaults but add small radius */
+.btn { border-radius: 6px; }
+
+/* Tables compact but readable */
+.table td, .table th { padding: 0.6rem 0.8rem; }
+
+/* Product grid: fall back to original density */
+#products-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
+@media(min-width:768px){ #products-list{ grid-template-columns: repeat(4,1fr); } }
+
+/* Small helpers to ensure icons/buttons are visible */
+.btn .visually-hidden, .btn .sr-only { position: static !important; clip: auto !important; width: auto !important; height: auto !important; overflow: visible !important; }
+
+/* Avoid forcing large background colors */
+* { background-image: none !important; }
+
+/* Keep badges subtle */
+.qty-badge { background: #0d6efd !important; color: #fff !important; }
+
+/* Respect existing Bootstrap/Tailwind spacing */
+.fw-bold { font-weight: 700; }
+
+/* End minimal overrides */
+/* Refreshed visual theme: cleaner spacing, larger type, softer palette
+   Goal: make the admin/staff UI more readable and scannable without changing markup.
+   This file intentionally targets existing classes used across the app. */
+
+:root{
+  --bg: #fbfdff;              /* very light blue-white */
+  --surface: #ffffff;         /* card surface */
+  --muted: #6b7280;          /* subdued text */
+  --text: #0f172a;           /* primary text (dark navy) */
+  --accent: #0d6efd;         /* primary accent / actions */
+  --success: #16a34a;
+  --card-border: rgba(15,23,42,0.06);
+  --radius: 10px;
+}
+
+/* Base adjustments: font + background */
+body, .app-readability-override { font-family: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg) !important; color:var(--text) !important; }
+
+/* Card system: gentler shadows, rounded corners, clear separation */
+.card, .kds-card, .product-tile { background:var(--surface) !important; color:var(--text) !important; border:1px solid var(--card-border) !important; border-radius:var(--radius) !important; box-shadow: 0 6px 18px rgba(12,18,28,0.04); }
+.card-header { background: transparent !important; color:var(--text) !important; border-bottom:1px solid rgba(15,23,42,0.04); padding:.6rem .9rem; font-weight:700; }
+.card-body { padding:.9rem !important; }
+
+/* Typography scales */
+.card .card-title, .product-tile .card-title { font-size:1rem; font-weight:700; color:var(--text); }
+.small, small, .text-muted { color:var(--muted) !important; }
+
+/* Buttons and actions */
+.btn { border-radius:8px; font-weight:600; }
+.btn-primary, .btn-outline-primary { background:var(--accent); border-color:var(--accent); color:#fff !important; }
+.btn-outline-light{ color:var(--text) !important; background: rgba(255,255,255,0.95); border-color: var(--card-border) !important; }
+.btn-outline-light:hover{ background:#fff; }
+
+/* Ensure small outline buttons inside cards show their text and have tappable area */
+.card .btn, .kds-card .btn, .card a.btn { display:inline-flex !important; align-items:center !important; justify-content:center !important; gap:6px; padding:.38rem .6rem !important; min-width:48px; white-space:nowrap; }
+.card .btn.btn-sm, .kds-card .btn.btn-sm { padding:.28rem .5rem !important; min-width:44px; font-size:.88rem; }
+.btn-outline-primary, .btn-outline-secondary, .btn-outline-danger { background: transparent !important; color: var(--accent) !important; border:1px solid rgba(15,23,42,0.08) !important; }
+.btn-outline-secondary { color: #495057 !important; }
+.btn-outline-danger { color: #c92a2a !important; border-color: rgba(201,42,42,0.12) !important; }
+.btn-outline-primary:hover, .btn-outline-secondary:hover, .btn-outline-danger:hover { background: rgba(13,110,253,0.06); color: var(--accent) !important; }
+
+/* If a button contains only an icon, ensure icon and accessible label are visible */
+.btn .visually-hidden, .btn .sr-only { position:static !important; clip:auto !important; width:auto !important; height:auto !important; overflow:visible !important; }
+
+/* Table styles: improved readability and reduced density */
+.table thead th{ background:#0b1220; color:#fff; border-color: rgba(11,18,32,0.85); font-weight:700; }
+.table td, .table th{ padding:.7rem .9rem; vertical-align:middle; }
+.table tbody tr:hover{ background: rgba(13,110,253,0.02); }
+
+/* Product tiles grid: denser but consistent */
+#products-list{ display:grid !important; grid-template-columns: repeat(2, 1fr); gap:12px; }
+#products-list .product-row{ width:100% !important; padding:6px !important; box-sizing:border-box; }
+@media(min-width:768px){ #products-list{ grid-template-columns: repeat(4, 1fr); } }
+@media(min-width:992px){ #products-list{ grid-template-columns: repeat(5, 1fr); } }
+@media(min-width:1200px){ #products-list{ grid-template-columns: repeat(6, 1fr); } }
+#products-list .product-tile{ min-height:110px; display:flex; flex-direction:column; justify-content:space-between; }
+#products-list .product-tile .card-body{ padding:.6rem !important; }
+
+/* Badges and quantity */
+.qty-badge{ background:var(--accent) !important; color:#fff !important; font-size:0.78rem; padding:4px 8px; border-radius:8px; }
+.product-tile .qty-badge{ position:absolute !important; top:8px; right:8px; z-index:40; }
+
+/* Compact +/- controls */
+.product-row .product-tile .tile-increment,
+.product-row .product-tile .tile-decrement{ width:30px !important; height:30px !important; padding:0 !important; display:inline-flex !important; align-items:center !important; justify-content:center !important; border-radius:8px !important; font-size:0.9rem !important; }
+
+/* Selected product tile visual state */
+.product-tile.selected{ outline:3px solid rgba(13,110,253,0.18); box-shadow:0 8px 26px rgba(13,110,253,0.08); transform:translateY(-4px); border-color: rgba(13,110,253,0.18) !important; }
+
+/* Category pill active state */
+.pill-filter.active{ background:var(--accent) !important; color:#fff !important; border-color:var(--accent) !important; box-shadow:none !important; }
+
+/* Ensure pills have clear touch area */
+.pill-filter{ padding:.28rem .6rem; border-radius:999px; }
+
+/* POS / Order summary */
+.pos-table thead th{ font-weight:700; background:#0b1220; color:#fff; }
+.pos-totals{ background:var(--surface); border-top:1px solid rgba(15,23,42,0.04); padding:14px; margin-top:10px; border-radius:8px; }
+.pos-total-value{ font-size:1.4rem; font-weight:800; }
+
+/* Mini KDS */
+.kds-mini .card{ box-shadow:none; border:1px solid rgba(15,23,42,0.04); }
+.kds-mini .card-body{ padding:.6rem .75rem; }
+
+/* Static exchange button placed under counters (not floating) */
+.exchange-toggle-fixed { display:flex; align-items:center; gap:10px; }
+.exchange-toggle-fixed .exchange-btn { width:48px; height:48px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; font-weight:700; box-shadow:0 6px 18px rgba(13,110,253,0.16); }
+.exchange-toggle-fixed .small { color: var(--muted); margin-left:4px; }
+
+/* KDS column headers: readable by default, allow colored variants */
+.kds-column-header{ color:var(--text) !important; background:transparent; padding:.5rem .7rem; border-bottom:1px solid rgba(15,23,42,0.04); font-weight:700; }
+.kds-column.kds-colored .kds-column-header{ color:#fff !important; }
+
+/* Ensure collapsed cards still show footer and preview */
+.kds-card.collapsed .kds-card-footer, .kds-card-preview{ display:block !important; }
+
+/* Toast */
+.toast-success{ background:var(--success); color:#fff }
+
+/* Admin area UI */
+.admin-category-card{ border-radius:12px; box-shadow:0 8px 22px rgba(12,18,28,0.05); transition: transform .12s ease, box-shadow .12s ease; }
+.admin-category-card:hover{ transform:translateY(-4px); box-shadow:0 18px 40px rgba(12,18,28,0.06); }
+.admin-category-card .card-title{ font-size:1.02rem; font-weight:800 }
+
+.price-input{ width:140px; }
+.save-ok{ font-size:0.95rem; color:var(--success); font-weight:700 }
+
+/* Compact tables */
+.table td, .table th{ padding:0.65rem .85rem }
+
+/* Badges & form controls */
+.badge.bg-secondary{ background:#6c757d; opacity:0.98 }
+.form-select, .form-control{ border-radius:8px }
+
+@media (max-width:576px){ .price-input{ width:100%; } }
+
+/* Comments on order rows */
+.item-comment{ max-width:100%; border-radius:8px }
+@media(min-width:768px){ .item-comment{ max-width:380px } }
+
+/* Small helpers: make links inside cards visible without disrupting colored headers */
+.card a, .kds-card a{ color: var(--accent) !important; text-decoration: none; }
+.card a:hover, .kds-card a:hover{ text-decoration: underline; }
+
+/* Accessibility: ensure sufficient contrast on interactive elements */
+.btn-primary, .btn-success, .btn-warning { font-weight:700 }
+
+/* Notes:
+   - This file focuses on visual refresh only; no HTML or JS changes.
+   - If you'd like a dark-mode variant or more dramatic redesign (fonts/icons), I can add it next.
+*/
+
+/* ===== Accessibility / input readability fixes =====
+    Ensure form controls and price display inside cards/panels are
+    readable (dark text) even if other global rules set white text.
+    These rules are intentionally specific and use !important only
+    where necessary to override inlined or high-specificity styles.
+*/
+.card input,
+.card textarea,
+.card select,
+.card .form-control,
+.card .form-select,
+.card .price-input,
+.app-centered-container input,
+.app-centered-container textarea,
+.app-centered-container select,
+.app-centered-container .form-control,
+.app-centered-container .form-select,
+.app-centered-container .price-input {
+   color: #111 !important;
+   background-color: #ffffff !important;
+   border-color: rgba(0,0,0,0.08) !important;
+}
+
+/* Price labels that live under inputs (formatted amounts) */
+.card .price-label, .price-label {
+   color: #6b7280 !important; /* muted dark text */
+}
+
+/* If some components used utility classes forcing white text, neutralize them inside cards */
+.card .text-white, .card .text-light {
+   color: inherit !important;
+}
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replaced placeholder with user-provided LOGO-style text SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Helvetica, Arial, sans-serif" font-weight="900" font-size="260" fill="#000000">LOGO</text>
+</svg>

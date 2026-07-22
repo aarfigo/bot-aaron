@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="2oQgZwiUrD4ITnDAEJZdVPIHY3C3RlPnOl0YIN8K">
+
+    <title>Aaron bot</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
+        <!-- Scripts -->
+        <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-CTLhFvZ_.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8000/build/assets/app-ByW0VTRm.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-CTLhFvZ_.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-ByW0VTRm.js"></script>        <!-- Bootstrap (legacy views use Bootstrap classes) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1FQ784/1p2U3Ckz9ZgqQGA5w5YkN0R8ABTQXK0yK7NQ" crossorigin="anonymous">
+    </head>
+    <body class="font-sans antialiased">
+        <div class="min-h-screen bg-gray-100">
+            <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+    <!-- Primary Navigation Menu -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex">
+                <!-- Logo -->
+                <div class="shrink-0 flex items-center">
+                    <a href="http://127.0.0.1:8000/dashboard">
+                        <svg viewBox="0 0 316 316" xmlns="http://www.w3.org/2000/svg" class="block h-9 w-auto fill-current text-gray-800">
+    <path d="M305.8 81.125C305.77 80.995 305.69 80.885 305.65 80.755C305.56 80.525 305.49 80.285 305.37 80.075C305.29 79.935 305.17 79.815 305.07 79.685C304.94 79.515 304.83 79.325 304.68 79.175C304.55 79.045 304.39 78.955 304.25 78.845C304.09 78.715 303.95 78.575 303.77 78.475L251.32 48.275C249.97 47.495 248.31 47.495 246.96 48.275L194.51 78.475C194.33 78.575 194.19 78.725 194.03 78.845C193.89 78.955 193.73 79.045 193.6 79.175C193.45 79.325 193.34 79.515 193.21 79.685C193.11 79.815 192.99 79.935 192.91 80.075C192.79 80.285 192.71 80.525 192.63 80.755C192.58 80.875 192.51 80.995 192.48 81.125C192.38 81.495 192.33 81.875 192.33 82.265V139.625L148.62 164.795V52.575C148.62 52.185 148.57 51.805 148.47 51.435C148.44 51.305 148.36 51.195 148.32 51.065C148.23 50.835 148.16 50.595 148.04 50.385C147.96 50.245 147.84 50.125 147.74 49.995C147.61 49.825 147.5 49.635 147.35 49.485C147.22 49.355 147.06 49.265 146.92 49.155C146.76 49.025 146.62 48.885 146.44 48.785L93.99 18.585C92.64 17.805 90.98 17.805 89.63 18.585L37.18 48.785C37 48.885 36.86 49.035 36.7 49.155C36.56 49.265 36.4 49.355 36.27 49.485C36.12 49.635 36.01 49.825 35.88 49.995C35.78 50.125 35.66 50.245 35.58 50.385C35.46 50.595 35.38 50.835 35.3 51.065C35.25 51.185 35.18 51.305 35.15 51.435C35.05 51.805 35 52.185 35 52.575V232.235C35 233.795 35.84 235.245 37.19 236.025L142.1 296.425C142.33 296.555 142.58 296.635 142.82 296.725C142.93 296.765 143.04 296.835 143.16 296.865C143.53 296.965 143.9 297.015 144.28 297.015C144.66 297.015 145.03 296.965 145.4 296.865C145.5 296.835 145.59 296.775 145.69 296.745C145.95 296.655 146.21 296.565 146.45 296.435L251.36 236.035C252.72 235.255 253.55 233.815 253.55 232.245V174.885L303.81 145.945C305.17 145.165 306 143.725 306 142.155V82.265C305.95 81.875 305.89 81.495 305.8 81.125ZM144.2 227.205L100.57 202.515L146.39 176.135L196.66 147.195L240.33 172.335L208.29 190.625L144.2 227.205ZM244.75 114.995V164.795L226.39 154.225L201.03 139.625V89.825L219.39 100.395L244.75 114.995ZM249.12 57.105L292.81 82.265L249.12 107.425L205.43 82.265L249.12 57.105ZM114.49 184.425L96.13 194.995V85.305L121.49 70.705L139.85 60.135V169.815L114.49 184.425ZM91.76 27.425L135.45 52.585L91.76 77.745L48.07 52.585L91.76 27.425ZM43.67 60.135L62.03 70.705L87.39 85.305V202.545V202.555V202.565C87.39 202.735 87.44 202.895 87.46 203.055C87.49 203.265 87.49 203.485 87.55 203.695V203.705C87.6 203.875 87.69 204.035 87.76 204.195C87.84 204.375 87.89 204.575 87.99 204.745C87.99 204.745 87.99 204.755 88 204.755C88.09 204.905 88.22 205.035 88.33 205.175C88.45 205.335 88.55 205.495 88.69 205.635L88.7 205.645C88.82 205.765 88.98 205.855 89.12 205.965C89.28 206.085 89.42 206.225 89.59 206.325C89.6 206.325 89.6 206.325 89.61 206.335C89.62 206.335 89.62 206.345 89.63 206.345L139.87 234.775V285.065L43.67 229.705V60.135ZM244.75 229.705L148.58 285.075V234.775L219.8 194.115L244.75 179.875V229.705ZM297.2 139.625L253.49 164.795V114.995L278.85 100.395L297.21 89.825V139.625H297.2Z"/>
+</svg>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <a class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out" href="http://127.0.0.1:8000/dashboard">
+    Dashboard
+</a>
+                                                                <a class="inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out" href="http://127.0.0.1:8000/staff/orders">
+    Ordenes
+</a>
+                                    </div>
+            </div>
+
+            <!-- Settings Dropdown -->
+            <div class="hidden sm:flex sm:items-center sm:ms-6">
+                <div class="relative" x-data="{ open: false }" @click.outside="open = false" @close.stop="open = false">
+    <div @click="open = ! open">
+        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                            <div>Mesero</div>
+
+                            <div class="ms-1">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </button>
+    </div>
+
+    <div x-show="open"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95"
+            class="absolute z-50 mt-2 w-48 rounded-md shadow-lg ltr:origin-top-right rtl:origin-top-left end-0"
+            style="display: none;"
+            @click="open = false">
+        <div class="rounded-md ring-1 ring-black ring-opacity-5 py-1 bg-white">
+            <a class="block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" href="http://127.0.0.1:8000/profile">Profile</a>
+
+                            
+                        <!-- Authentication -->
+                        <form method="POST" action="http://127.0.0.1:8000/logout">
+                            <input type="hidden" name="_token" value="2oQgZwiUrD4ITnDAEJZdVPIHY3C3RlPnOl0YIN8K" autocomplete="off">
+                            <a class="block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" href="http://127.0.0.1:8000/logout" onclick="event.preventDefault();
+                                                this.closest('form').submit();">Log Out</a>
+                        </form>
+        </div>
+    </div>
+</div>
+            </div>
+
+            <!-- Hamburger -->
+            <div class="-me-2 flex items-center sm:hidden">
+                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Responsive Navigation Menu -->
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+        <div class="pt-2 pb-3 space-y-1">
+            <a class="block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out" href="http://127.0.0.1:8000/dashboard">
+    Dashboard
+</a>
+        </div>
+
+        <!-- Responsive Settings Options -->
+        <div class="pt-4 pb-1 border-t border-gray-200">
+            <div class="px-4">
+                <div class="font-medium text-base text-gray-800">Mesero</div>
+                <div class="font-medium text-sm text-gray-500">mesero@example.com</div>
+            </div>
+
+            <div class="mt-3 space-y-1">
+                <a class="block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out" href="http://127.0.0.1:8000/profile">
+    Profile
+</a>
+
+                <!-- Authentication -->
+                <form method="POST" action="http://127.0.0.1:8000/logout">
+                    <input type="hidden" name="_token" value="2oQgZwiUrD4ITnDAEJZdVPIHY3C3RlPnOl0YIN8K" autocomplete="off">
+                    <a class="block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out" href="http://127.0.0.1:8000/logout" onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+    Log Out
+</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+
+            <!-- Page Heading -->
+            
+            <!-- Page Content -->
+            <main>
+                                    <div class="container">
+    <h1>Crear Pedido</h1>
+
+    <div class="row">
+            <div class="col-md-8 order-md-2">
+            <h4>Productos</h4>
+            <div class="mb-3">
+                <div id="category-pills" class="mb-2" style="max-width:100%;">
+                    <button type="button" class="btn btn-sm btn-outline-secondary me-1 pill-filter active" data-menu="">Todas las categorías</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary me-1 pill-filter" data-menu="8">Desayunos</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary me-1 pill-filter" data-menu="9">Carnes</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary me-1 pill-filter" data-menu="10">Bebidas</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary me-1 pill-filter" data-menu="11">Sopas</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary me-1 pill-filter" data-menu="12">ccc</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary me-1 pill-filter" data-menu="13">SMOKE-MENU</button>
+                                    </div>
+                <div id="products-list" class="row g-3" style="max-height:72vh;overflow:auto;">
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="8">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="17" data-name="Huevos en Caserola" data-price="5000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Huevos en Caserola</h6>
+                                                <small class="text-muted d-block">Desayunos</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">5,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="8">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="19" data-name="Huevos Revueltos" data-price="5000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Huevos Revueltos</h6>
+                                                <small class="text-muted d-block">Desayunos</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">5,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="8">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="20" data-name="Carne en Bistec" data-price="6000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Carne en Bistec</h6>
+                                                <small class="text-muted d-block">Desayunos</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">6,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="8">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="21" data-name="Calentado" data-price="6000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Calentado</h6>
+                                                <small class="text-muted d-block">Desayunos</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">6,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="9">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="22" data-name="Filete de Pollo" data-price="6000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Filete de Pollo</h6>
+                                                <small class="text-muted d-block">Carnes</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">6,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="9">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="23" data-name="Filete de Carne" data-price="6000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Filete de Carne</h6>
+                                                <small class="text-muted d-block">Carnes</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">6,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="9">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="24" data-name="Chuleta de Pollo" data-price="6000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Chuleta de Pollo</h6>
+                                                <small class="text-muted d-block">Carnes</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">6,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="9">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="25" data-name="Chuleta de Res" data-price="6000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Chuleta de Res</h6>
+                                                <small class="text-muted d-block">Carnes</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">6,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="9">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="26" data-name="Chuleta de Cerdo" data-price="6000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Chuleta de Cerdo</h6>
+                                                <small class="text-muted d-block">Carnes</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">6,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="9">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="27" data-name="Res Asada" data-price="6000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Res Asada</h6>
+                                                <small class="text-muted d-block">Carnes</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">6,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="9">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="28" data-name="Pollo Asado" data-price="6000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Pollo Asado</h6>
+                                                <small class="text-muted d-block">Carnes</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">6,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="9">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="29" data-name="Pollo Frito" data-price="6000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Pollo Frito</h6>
+                                                <small class="text-muted d-block">Carnes</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">6,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="10">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="30" data-name="Tinto" data-price="1000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Tinto</h6>
+                                                <small class="text-muted d-block">Bebidas</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">1,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="10">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="31" data-name="Café con Leche" data-price="1200">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Café con Leche</h6>
+                                                <small class="text-muted d-block">Bebidas</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">1,200.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="10">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="32" data-name="Gaseosa 350 ML" data-price="2000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Gaseosa 350 ML</h6>
+                                                <small class="text-muted d-block">Bebidas</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">2,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="10">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="33" data-name="Gaseosa 200 ML" data-price="1500">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Gaseosa 200 ML</h6>
+                                                <small class="text-muted d-block">Bebidas</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">1,500.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="10">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="34" data-name="Jugo Natural en Agua" data-price="4000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Jugo Natural en Agua</h6>
+                                                <small class="text-muted d-block">Bebidas</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">4,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="10">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="35" data-name="Jugo Natural en Leche" data-price="5000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Jugo Natural en Leche</h6>
+                                                <small class="text-muted d-block">Bebidas</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">5,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="10">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="36" data-name="Jugo de Naranja" data-price="3500">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Jugo de Naranja</h6>
+                                                <small class="text-muted d-block">Bebidas</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">3,500.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="11">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="37" data-name="Cremas" data-price="3000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Cremas</h6>
+                                                <small class="text-muted d-block">Sopas</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">3,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="11">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="38" data-name="Sancocho" data-price="3000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Sancocho</h6>
+                                                <small class="text-muted d-block">Sopas</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">3,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="11">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="39" data-name="Caldo de Costilla" data-price="3000">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">Caldo de Costilla</h6>
+                                                <small class="text-muted d-block">Sopas</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">3,000.00</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-6 col-md-3 product-row p-1" data-menu="13">
+                                                                        <div class="card product-tile h-100" tabindex="0" data-id="40" data-name="SMOKE-ITEM" data-price="9.5">
+                                        <div class="tile-image" style="background-image: url('http://127.0.0.1:8000/image/placeholder.png');"></div>
+                                        <div class="card-body d-flex flex-column justify-content-between position-relative">
+                                            <div>
+                                                <h6 class="card-title mb-1 text-truncate">SMOKE-ITEM</h6>
+                                                <small class="text-muted d-block">SMOKE-MENU</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fw-bold fs-6">9.50</div>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-sm btn-outline-secondary tile-decrement me-1" type="button">-</button>
+                                                    <button class="btn btn-success btn-sm tile-increment" type="button">+</button>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-primary qty-badge position-absolute" style="display:none; top:8px; right:8px;">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+                <div class="col-md-4 order-md-1">
+                    <h4>Pedido</h4>
+                    <form id="order-form" method="POST" action="http://127.0.0.1:8000/staff/orders" class="card p-3 sticky-top" style="top:20px;">
+                            <input type="hidden" name="_token" value="2oQgZwiUrD4ITnDAEJZdVPIHY3C3RlPnOl0YIN8K" autocomplete="off">                            <style>
+                                /* POS-like order summary styles (visual polish to match reference) */
+                                .pos-table{margin-bottom:0}
+                                .pos-table thead th{font-weight:700;background:#111;color:#fff;border-color:#111}
+                                .pos-table tbody td{vertical-align:middle;padding:.45rem}
+                                .table-sm td, .table-sm th{padding:.35rem}
+                                .pos-totals{background:#fff;border-top:2px solid #ddd;padding:14px;margin-top:8px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+                                .pos-total-value{font-size:1.6rem;font-weight:800}
+                                .pos-subtitle{font-size:0.95rem;color:#666}
+                                .qty-input-small{width:72px}
+                                .product-tile.selected{outline:3px solid rgba(13,110,253,.18);box-shadow:0 2px 6px rgba(13,110,253,.08)}
+                                .tile-image{height:98px;background-size:cover;background-position:center;border-top-left-radius:4px;border-top-right-radius:4px}
+                                .product-tile .card-body{padding:.5rem}
+                                /* totals box elevated */
+                                .totals-box{background:#f7f7f7;padding:12px;border-radius:4px}
+                                .totals-big{font-size:1.25rem;font-weight:800}
+                                /* make remove button small X */
+                                .remove-item{padding:.25rem .45rem}
+                            </style>
+
+                            <div class="mb-2">
+                                <table class="table pos-table" id="basket-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:30px">LN</th>
+                                            <th style="width:70px">Código</th>
+                                            <th>Producto</th>
+                                            <th style="width:90px">Cant</th>
+                                            <th style="width:100px">Precio</th>
+                                            <th style="width:100px">Subtotal</th>
+                                            <th style="width:40px"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <div class="totals-box">
+                                        <div class="d-flex justify-content-between"><div>Subtotal:</div><div><strong id="basket-subtotal">0.00</strong></div></div>
+                                        <div class="d-flex justify-content-between"><div>Impuesto (12%):</div><div id="basket-tax">0.00</div></div>
+                                        <hr />
+                                        <div class="d-flex justify-content-between align-items-baseline"><div class="pos-subtitle">Total:</div><div class="totals-big"><span id="basket-total">0.00</span></div></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2">
+                                    <div class="d-grid">
+                                        <button class="btn btn-primary btn-lg" type="submit">Enviar pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                </div>
+        </div>
+    </div>
+</div>
+
+                            </main>
+        </div>
+        
+        <script>
+(function(){
+    const basket = [];
+    const basketTable = document.querySelector('#basket-table tbody');
+    const totalEl = document.getElementById('basket-total');
+    const orderForm = document.getElementById('order-form');
+
+    function clearHiddenItemInputs(){
+        orderForm.querySelectorAll('input[name^="items"]').forEach(i=>i.remove());
+    }
+
+    function findInBasket(id){ return basket.find(b=>b.id == id); }
+
+    function addProductById(id, name, price, qty = 1){
+        const ex = findInBasket(id);
+        if(ex){ ex.quantity = Math.max(1, ex.quantity + qty); }
+        else { basket.push({ id: id, name: name, price: price, quantity: Math.max(1, qty), comment: '' }); }
+        updateTileState(id);
+        renderBasket();
+    }
+
+    function setProductQuantity(id, qty){
+        const ex = findInBasket(id);
+        if(!ex) return;
+        ex.quantity = Math.max(0, qty);
+        if(ex.quantity === 0){ const i = basket.indexOf(ex); if(i>=0) basket.splice(i,1); }
+        updateTileState(id);
+        renderBasket();
+    }
+
+    function updateTileState(id){
+        // update badge and selected state for a tile
+        const tile = document.querySelector(`.product-tile[data-id='${id}']`);
+        const ex = findInBasket(id);
+        if(!tile) return;
+        const badge = tile.querySelector('.qty-badge');
+        if(ex){ badge.style.display = ''; badge.textContent = ex.quantity; tile.classList.add('selected'); }
+        else { badge.style.display = 'none'; badge.textContent = '0'; tile.classList.remove('selected'); }
+    }
+
+    function renderBasket(){
+        basketTable.innerHTML = '';
+        let total = 0;
+        basket.forEach((row, idx)=>{
+            const tr = document.createElement('tr');
+            const lineTotal = (row.price * row.quantity);
+            tr.innerHTML = `
+                <td>${idx+1}</td>
+                <td>${row.id}</td>
+                <td class="fw-bold">${row.name}</td>
+                <td><input type="number" min="1" value="${row.quantity}" class="form-control form-control-sm qty-input qty-input-small" data-idx="${idx}" /></td>
+                <td class="text-end">${row.price.toFixed(2)}</td>
+                <td class="text-end">${lineTotal.toFixed(2)}</td>
+                <td><button type="button" class="btn btn-sm btn-danger remove-item" data-idx="${idx}">X</button></td>
+            `;
+            basketTable.appendChild(tr);
+            total += lineTotal;
+        });
+        const tax = +(total * 0.12).toFixed(2);
+        const grand = +(total + tax).toFixed(2);
+        document.getElementById('basket-subtotal').textContent = total.toFixed(2);
+        document.getElementById('basket-tax').textContent = tax.toFixed(2);
+        totalEl.textContent = grand.toFixed(2);
+        clearHiddenItemInputs();
+        basket.forEach((b, i)=>{
+            const idInput = document.createElement('input');
+            idInput.type = 'hidden';
+            idInput.name = `items[${i}][itemID]`;
+            idInput.value = b.id;
+            orderForm.appendChild(idInput);
+
+            const qtyInput = document.createElement('input');
+            qtyInput.type = 'hidden';
+            qtyInput.name = `items[${i}][quantity]`;
+            qtyInput.value = b.quantity;
+            orderForm.appendChild(qtyInput);
+
+            const cInput = document.createElement('input');
+            cInput.type = 'hidden';
+            cInput.name = `items[${i}][comment]`;
+            cInput.value = b.comment || '';
+            orderForm.appendChild(cInput);
+        });
+    }
+
+    // tile interactions
+    document.querySelectorAll('.product-tile').forEach(tile=>{
+        // increment on click of tile body
+        tile.addEventListener('click', function(e){
+            // ignore clicks on the decrement button
+            if(e.target.closest('.tile-decrement')) return;
+            const id = this.dataset.id;
+            const name = this.dataset.name;
+            const price = parseFloat(this.dataset.price);
+            addProductById(id, name, price, 1);
+        });
+
+        // keyboard add with Enter
+        tile.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); this.click(); } });
+    });
+
+    // delegated +/- handlers
+    document.addEventListener('click', function(e){
+        if(e.target.classList.contains('tile-increment')){
+            const tile = e.target.closest('.product-tile');
+            const id = tile.dataset.id; addProductById(id, tile.dataset.name, parseFloat(tile.dataset.price), 1);
+        } else if(e.target.classList.contains('tile-decrement')){
+            const tile = e.target.closest('.product-tile');
+            const id = tile.dataset.id; const ex = findInBasket(id);
+            if(ex){ setProductQuantity(id, ex.quantity - 1); }
+        }
+    });
+
+    // keep tiles in sync when basket row qty changes or removed
+    basketTable.addEventListener('click', function(e){
+        if(e.target.classList.contains('remove-item')){
+            const idx = parseInt(e.target.dataset.idx);
+            const id = basket[idx].id;
+            basket.splice(idx,1);
+            updateTileState(id);
+            renderBasket();
+        }
+    });
+
+    basketTable.addEventListener('input', function(e){
+        if(e.target.classList.contains('qty-input')){
+            const idx = parseInt(e.target.dataset.idx);
+            const val = parseInt(e.target.value) || 1;
+            basket[idx].quantity = val;
+            updateTileState(basket[idx].id);
+            renderBasket();
+        }
+    });
+
+    // fall back: old add-product button compatibility
+    document.querySelectorAll('.add-product').forEach(btn=>{
+        btn.addEventListener('click', function(){
+            const id = this.dataset.id; const name = this.dataset.name; const price = parseFloat(this.dataset.price);
+            addProductById(id, name, price, 1);
+        });
+    });
+
+    // category pills filter
+    const pillsContainer = document.getElementById('category-pills');
+    if(pillsContainer){
+        pillsContainer.addEventListener('click', function(e){
+            const btn = e.target.closest('.pill-filter');
+            if(!btn) return;
+            // set active class
+            pillsContainer.querySelectorAll('.pill-filter').forEach(p=>p.classList.remove('active'));
+            btn.classList.add('active');
+            const val = btn.dataset.menu;
+            document.querySelectorAll('.product-row').forEach(r=>{
+                if(!val || r.dataset.menu == val) r.style.display = '';
+                else r.style.display = 'none';
+            });
+        });
+    }
+
+    // submit
+    document.getElementById('order-form').addEventListener('submit', function(e){
+        if(basket.length === 0){ e.preventDefault(); alert('Añade al menos un producto al pedido'); return; }
+        renderBasket();
+    });
+
+    // initialize tile badge states in case server-side preselected
+    document.querySelectorAll('.product-tile').forEach(t=>{ updateTileState(t.dataset.id); });
+})();
+</script>
+    </body>
+</html>

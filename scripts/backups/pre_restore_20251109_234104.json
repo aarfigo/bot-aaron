@@ -1,0 +1,482 @@
+[
+    {
+        "orderID": 1,
+        "status": "finish",
+        "total": 1000,
+        "order_date": "2020-01-17",
+        "customer_table": "Takeaway",
+        "attended_by": null,
+        "created_by": null,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 2,
+        "status": "finish",
+        "total": 10000,
+        "order_date": "2020-01-17",
+        "customer_table": "Takeaway",
+        "attended_by": null,
+        "created_by": null,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 3,
+        "status": "cleaned",
+        "total": 11000,
+        "order_date": "2020-01-18",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": null,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 4,
+        "status": "cancelled",
+        "total": 6000,
+        "order_date": "2020-01-18",
+        "customer_table": "Takeaway",
+        "attended_by": null,
+        "created_by": null,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 5,
+        "status": "cleaned",
+        "total": 10000,
+        "order_date": "2020-01-25",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": null,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 6,
+        "status": "cleaned",
+        "total": 15500,
+        "order_date": "2020-01-25",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": null,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 7,
+        "status": "cleaned",
+        "total": 16200,
+        "order_date": "2025-02-28",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": null,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 8,
+        "status": "cleaned",
+        "total": 5000,
+        "order_date": "2025-02-28",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": null,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 9,
+        "status": "cleaned",
+        "total": 19,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 10,
+        "status": "cleaned",
+        "total": 19,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 11,
+        "status": "served",
+        "total": 9.5,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 12,
+        "status": "cleaned",
+        "total": 28.5,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 13,
+        "status": "cleaned",
+        "total": 19,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 14,
+        "status": "cleaned",
+        "total": 19,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 15,
+        "status": "cleaned",
+        "total": 19,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 16,
+        "status": "cleaned",
+        "total": 19,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 17,
+        "status": "cleaned",
+        "total": 6009.5,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 18,
+        "status": "cleaned",
+        "total": 12000,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 19,
+        "status": "cleaned",
+        "total": 20000,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 20,
+        "status": "cleaned",
+        "total": 19,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 21,
+        "status": "cleaned",
+        "total": 16000,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 22,
+        "status": "cleaned",
+        "total": 35200,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 23,
+        "status": "cleaned",
+        "total": 10700,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 24,
+        "status": "cleaned",
+        "total": 13500,
+        "order_date": "2025-11-08",
+        "customer_table": "Takeaway",
+        "attended_by": 4,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 28,
+        "status": "cleaned",
+        "total": 28000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 29,
+        "status": "cleaned",
+        "total": 16000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 30,
+        "status": "cleaned",
+        "total": 10000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 31,
+        "status": "cleaned",
+        "total": 10000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 32,
+        "status": "cleaned",
+        "total": 11000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 4,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 33,
+        "status": "cleaned",
+        "total": 17000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 34,
+        "status": "cleaned",
+        "total": 6019,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 4,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 35,
+        "status": "cleaned",
+        "total": 11000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 4,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 36,
+        "status": "cleaned",
+        "total": 11000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 37,
+        "status": "cleaned",
+        "total": 17000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 4,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 38,
+        "status": "cleaned",
+        "total": 11000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 4,
+        "created_by": 4,
+        "kitchen_cleared": 1
+    },
+    {
+        "orderID": 39,
+        "status": "ready",
+        "total": 12000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 1
+    },
+    {
+        "orderID": 40,
+        "status": "cleaned",
+        "total": 22000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 4,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 41,
+        "status": "ready",
+        "total": 6009.5,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 42,
+        "status": "ready",
+        "total": 6125,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 1
+    },
+    {
+        "orderID": 43,
+        "status": "ready",
+        "total": 16000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 1
+    },
+    {
+        "orderID": 44,
+        "status": "preparing",
+        "total": 18000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 45,
+        "status": "waiting",
+        "total": 23000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": null,
+        "created_by": 4,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 46,
+        "status": "ready",
+        "total": 23000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": 5,
+        "created_by": 4,
+        "kitchen_cleared": 1
+    },
+    {
+        "orderID": 47,
+        "status": "waiting",
+        "total": 24000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": null,
+        "created_by": 6,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 48,
+        "status": "waiting",
+        "total": 11000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": null,
+        "created_by": 6,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 49,
+        "status": "waiting",
+        "total": 11000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": null,
+        "created_by": 6,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 50,
+        "status": "waiting",
+        "total": 11000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": null,
+        "created_by": 6,
+        "kitchen_cleared": 0
+    },
+    {
+        "orderID": 51,
+        "status": "waiting",
+        "total": 16000,
+        "order_date": "2025-11-09",
+        "customer_table": "Takeaway",
+        "attended_by": null,
+        "created_by": 6,
+        "kitchen_cleared": 0
+    }
+]
