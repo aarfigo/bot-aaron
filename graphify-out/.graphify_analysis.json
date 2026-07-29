@@ -1,0 +1,1193 @@
+{
+  "communities": {
+    "0": [
+      "app_http_controllers_admin_staffcontroller",
+      "app_http_requests_auth_loginrequest",
+      "app_models_staff",
+      "app_models_user",
+      "app_models_user_user",
+      "app_models_user_user_casts",
+      "illuminate_database_eloquent_factories_hasfactory",
+      "illuminate_foundation_auth_user",
+      "illuminate_foundation_testing_refreshdatabase",
+      "illuminate_foundation_testing_testcase",
+      "illuminate_notifications_notifiable",
+      "scripts_check_admin_nav",
+      "scripts_check_create_requires_table",
+      "scripts_render_order_show",
+      "tests_feature_auth_authenticationtest",
+      "tests_feature_auth_authenticationtest_authenticationtest",
+      "tests_feature_auth_authenticationtest_authenticationtest_test_login_screen_can_be_rendered",
+      "tests_feature_auth_authenticationtest_authenticationtest_test_users_can_authenticate_using_the_login_screen",
+      "tests_feature_auth_authenticationtest_authenticationtest_test_users_can_logout",
+      "tests_feature_auth_authenticationtest_authenticationtest_test_users_can_not_authenticate_with_invalid_password",
+      "tests_feature_auth_emailverificationtest",
+      "tests_feature_auth_emailverificationtest_emailverificationtest",
+      "tests_feature_auth_emailverificationtest_emailverificationtest_test_email_can_be_verified",
+      "tests_feature_auth_emailverificationtest_emailverificationtest_test_email_is_not_verified_with_invalid_hash",
+      "tests_feature_auth_emailverificationtest_emailverificationtest_test_email_verification_screen_can_be_rendered",
+      "tests_feature_auth_passwordconfirmationtest",
+      "tests_feature_auth_passwordconfirmationtest_passwordconfirmationtest",
+      "tests_feature_auth_passwordconfirmationtest_passwordconfirmationtest_test_confirm_password_screen_can_be_rendered",
+      "tests_feature_auth_passwordconfirmationtest_passwordconfirmationtest_test_password_can_be_confirmed",
+      "tests_feature_auth_passwordconfirmationtest_passwordconfirmationtest_test_password_is_not_confirmed_with_invalid_password",
+      "tests_feature_auth_passwordresettest",
+      "tests_feature_auth_passwordresettest_passwordresettest",
+      "tests_feature_auth_passwordresettest_passwordresettest_test_password_can_be_reset_with_valid_token",
+      "tests_feature_auth_passwordresettest_passwordresettest_test_reset_password_link_can_be_requested",
+      "tests_feature_auth_passwordresettest_passwordresettest_test_reset_password_link_screen_can_be_rendered",
+      "tests_feature_auth_passwordresettest_passwordresettest_test_reset_password_screen_can_be_rendered",
+      "tests_feature_auth_passwordupdatetest",
+      "tests_feature_auth_passwordupdatetest_passwordupdatetest",
+      "tests_feature_auth_passwordupdatetest_passwordupdatetest_test_correct_password_must_be_provided_to_update_password",
+      "tests_feature_auth_passwordupdatetest_passwordupdatetest_test_password_can_be_updated",
+      "tests_feature_auth_registrationtest",
+      "tests_feature_auth_registrationtest_registrationtest",
+      "tests_feature_auth_registrationtest_registrationtest_test_new_users_can_register",
+      "tests_feature_auth_registrationtest_registrationtest_test_registration_screen_can_be_rendered",
+      "tests_feature_exampletest",
+      "tests_feature_exampletest_exampletest",
+      "tests_feature_exampletest_exampletest_test_the_application_returns_a_successful_response",
+      "tests_feature_menucontrollertest",
+      "tests_feature_menucontrollertest_menucontrollertest",
+      "tests_feature_menucontrollertest_menucontrollertest_test_store_menu_validates_and_creates",
+      "tests_feature_ordercontrollertest",
+      "tests_feature_ordercontrollertest_ordercontrollertest",
+      "tests_feature_ordercontrollertest_ordercontrollertest_test_store_order_creates_rows",
+      "tests_feature_profiletest",
+      "tests_feature_profiletest_profiletest",
+      "tests_feature_profiletest_profiletest_test_correct_password_must_be_provided_to_delete_account",
+      "tests_feature_profiletest_profiletest_test_email_verification_status_is_unchanged_when_the_email_address_is_unchanged",
+      "tests_feature_profiletest_profiletest_test_profile_information_can_be_updated",
+      "tests_feature_profiletest_profiletest_test_profile_page_is_displayed",
+      "tests_feature_profiletest_profiletest_test_user_can_delete_their_account",
+      "tests_testcase",
+      "tests_testcase_testcase"
+    ],
+    "1": [
+      "app_http_controllers_auth_authenticatedsessioncontroller",
+      "app_http_controllers_auth_authenticatedsessioncontroller_authenticatedsessioncontroller",
+      "app_http_controllers_auth_authenticatedsessioncontroller_authenticatedsessioncontroller_create",
+      "app_http_controllers_auth_authenticatedsessioncontroller_authenticatedsessioncontroller_destroy",
+      "app_http_controllers_auth_confirmablepasswordcontroller",
+      "app_http_controllers_auth_confirmablepasswordcontroller_confirmablepasswordcontroller",
+      "app_http_controllers_auth_confirmablepasswordcontroller_confirmablepasswordcontroller_show",
+      "app_http_controllers_auth_confirmablepasswordcontroller_confirmablepasswordcontroller_store",
+      "app_http_controllers_auth_emailverificationnotificationcontroller",
+      "app_http_controllers_auth_emailverificationnotificationcontroller_emailverificationnotificationcontroller",
+      "app_http_controllers_auth_emailverificationnotificationcontroller_emailverificationnotificationcontroller_store",
+      "app_http_controllers_auth_emailverificationpromptcontroller",
+      "app_http_controllers_auth_emailverificationpromptcontroller_emailverificationpromptcontroller",
+      "app_http_controllers_auth_emailverificationpromptcontroller_emailverificationpromptcontroller_invoke",
+      "app_http_controllers_auth_newpasswordcontroller",
+      "app_http_controllers_auth_newpasswordcontroller_newpasswordcontroller",
+      "app_http_controllers_auth_newpasswordcontroller_newpasswordcontroller_create",
+      "app_http_controllers_auth_newpasswordcontroller_newpasswordcontroller_store",
+      "app_http_controllers_auth_passwordcontroller",
+      "app_http_controllers_auth_passwordcontroller_passwordcontroller",
+      "app_http_controllers_auth_passwordcontroller_passwordcontroller_update",
+      "app_http_controllers_auth_passwordresetlinkcontroller",
+      "app_http_controllers_auth_passwordresetlinkcontroller_passwordresetlinkcontroller",
+      "app_http_controllers_auth_passwordresetlinkcontroller_passwordresetlinkcontroller_create",
+      "app_http_controllers_auth_passwordresetlinkcontroller_passwordresetlinkcontroller_store",
+      "app_http_controllers_auth_registeredusercontroller",
+      "app_http_controllers_auth_registeredusercontroller_registeredusercontroller",
+      "app_http_controllers_auth_registeredusercontroller_registeredusercontroller_create",
+      "app_http_controllers_auth_registeredusercontroller_registeredusercontroller_store",
+      "app_http_controllers_auth_verifyemailcontroller",
+      "app_http_controllers_auth_verifyemailcontroller_verifyemailcontroller",
+      "app_http_controllers_auth_verifyemailcontroller_verifyemailcontroller_invoke",
+      "app_http_controllers_client_clientboardcontroller",
+      "app_http_controllers_controller",
+      "app_http_controllers_controller_controller",
+      "app_http_controllers_profilecontroller",
+      "app_http_controllers_profilecontroller_profilecontroller",
+      "app_http_controllers_profilecontroller_profilecontroller_destroy",
+      "app_http_controllers_profilecontroller_profilecontroller_edit",
+      "app_view_components_applayout",
+      "app_view_components_applayout_applayout",
+      "app_view_components_applayout_applayout_render",
+      "app_view_components_guestlayout",
+      "app_view_components_guestlayout_guestlayout",
+      "app_view_components_guestlayout_guestlayout_render",
+      "illuminate_foundation_auth_access_authorizesrequests",
+      "illuminate_foundation_auth_emailverificationrequest",
+      "illuminate_foundation_bus_dispatchesjobs",
+      "illuminate_foundation_validation_validatesrequests",
+      "illuminate_http_redirectresponse",
+      "illuminate_routing_controller",
+      "illuminate_view_component",
+      "illuminate_view_view",
+      "routes_auth",
+      "routes_web"
+    ],
+    "2": [
+      "app_http_controllers_admin_tablecontroller",
+      "app_http_controllers_admin_tablecontroller_tablecontroller",
+      "app_http_controllers_admin_tablecontroller_tablecontroller_destroy",
+      "app_http_controllers_admin_tablecontroller_tablecontroller_index",
+      "app_http_controllers_admin_tablecontroller_tablecontroller_store",
+      "app_http_controllers_api_orderapicontroller",
+      "app_http_controllers_api_orderapicontroller_orderapicontroller",
+      "app_http_controllers_api_orderapicontroller_orderapicontroller_additem",
+      "app_http_controllers_authcontroller",
+      "app_http_controllers_authcontroller_authcontroller",
+      "app_http_controllers_authcontroller_authcontroller_login",
+      "app_http_controllers_authcontroller_authcontroller_logout",
+      "app_http_controllers_authcontroller_authcontroller_showlogin",
+      "app_http_controllers_client_clientboardcontroller_clientboardcontroller",
+      "app_http_controllers_client_clientboardcontroller_clientboardcontroller_buildpayload",
+      "app_http_controllers_client_clientboardcontroller_clientboardcontroller_data",
+      "app_http_controllers_client_clientboardcontroller_clientboardcontroller_index",
+      "app_http_controllers_staff_kitchencontroller",
+      "app_http_controllers_staff_kitchencontroller_kitchencontroller",
+      "app_http_controllers_staff_kitchencontroller_kitchencontroller_index",
+      "app_http_controllers_staff_ordercontroller",
+      "app_http_controllers_staff_ordercontroller_ordercontroller",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_changestatus",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_charge",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_clean",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_construct",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_create",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_edit",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_finalize",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_flushlivemetricscache",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_index",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_kdstiles",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_kitchenclear",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_reiniciodia",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_show",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_store",
+      "app_http_controllers_staff_ordercontroller_ordercontroller_update",
+      "app_http_controllers_staff_tablecontroller",
+      "app_http_controllers_staff_tablecontroller_tablecontroller",
+      "app_http_controllers_staff_tablecontroller_tablecontroller_charge",
+      "app_http_controllers_staff_tablecontroller_tablecontroller_chargeview",
+      "app_http_controllers_staff_tablecontroller_tablecontroller_destroy",
+      "app_http_controllers_staff_tablecontroller_tablecontroller_flushlivemetricscache",
+      "app_http_controllers_staff_tablecontroller_tablecontroller_index",
+      "app_http_controllers_staff_tablecontroller_tablecontroller_show",
+      "app_http_controllers_staff_tablecontroller_tablecontroller_store",
+      "app_http_controllers_staff_tablecontroller_tablecontroller_update",
+      "config_cache",
+      "illuminate_http_request"
+    ],
+    "3": [
+      "composer",
+      "composer_allow_plugins_pestphp_pest_plugin",
+      "composer_allow_plugins_php_http_discovery",
+      "composer_autoload",
+      "composer_autoload_dev",
+      "composer_autoload_dev_psr_4",
+      "composer_autoload_psr_4",
+      "composer_config",
+      "composer_config_allow_plugins",
+      "composer_config_optimize_autoloader",
+      "composer_config_preferred_install",
+      "composer_config_sort_packages",
+      "composer_description",
+      "composer_extra",
+      "composer_extra_laravel",
+      "composer_keywords",
+      "composer_laravel_dont_discover",
+      "composer_license",
+      "composer_minimum_stability",
+      "composer_name",
+      "composer_prefer_stable",
+      "composer_psr_4_app",
+      "composer_psr_4_database_factories",
+      "composer_psr_4_database_seeders",
+      "composer_psr_4_tests",
+      "composer_require",
+      "composer_require_dev",
+      "composer_require_dev_fakerphp_faker",
+      "composer_require_dev_laravel_breeze",
+      "composer_require_dev_laravel_pail",
+      "composer_require_dev_laravel_pint",
+      "composer_require_dev_laravel_sail",
+      "composer_require_dev_mockery_mockery",
+      "composer_require_dev_nunomaduro_collision",
+      "composer_require_dev_phpunit_phpunit",
+      "composer_require_laravel_framework",
+      "composer_require_laravel_tinker",
+      "composer_require_php",
+      "composer_schema",
+      "composer_type",
+      "ref_framework",
+      "ref_laravel"
+    ],
+    "4": [
+      "app_http_controllers_admin_staffcontroller_staffcontroller",
+      "app_http_controllers_admin_staffcontroller_staffcontroller_create",
+      "app_http_controllers_admin_staffcontroller_staffcontroller_destroy",
+      "app_http_controllers_admin_staffcontroller_staffcontroller_edit",
+      "app_http_controllers_admin_staffcontroller_staffcontroller_index",
+      "app_http_controllers_admin_staffcontroller_staffcontroller_store",
+      "app_http_controllers_admin_staffcontroller_staffcontroller_update",
+      "app_http_controllers_auth_authenticatedsessioncontroller_authenticatedsessioncontroller_store",
+      "app_http_controllers_profilecontroller_profilecontroller_update",
+      "app_http_requests_auth_loginrequest_loginrequest",
+      "app_http_requests_auth_loginrequest_loginrequest_authenticate",
+      "app_http_requests_auth_loginrequest_loginrequest_authorize",
+      "app_http_requests_auth_loginrequest_loginrequest_ensureisnotratelimited",
+      "app_http_requests_auth_loginrequest_loginrequest_rules",
+      "app_http_requests_auth_loginrequest_loginrequest_throttlekey",
+      "app_http_requests_profileupdaterequest",
+      "app_http_requests_profileupdaterequest_profileupdaterequest",
+      "app_http_requests_profileupdaterequest_profileupdaterequest_rules",
+      "app_http_requests_storeorderrequest",
+      "app_http_requests_storeorderrequest_storeorderrequest",
+      "app_http_requests_storeorderrequest_storeorderrequest_authorize",
+      "app_http_requests_storeorderrequest_storeorderrequest_prepareforvalidation",
+      "app_http_requests_storeorderrequest_storeorderrequest_rules",
+      "app_http_requests_storestaffrequest",
+      "app_http_requests_storestaffrequest_storestaffrequest",
+      "app_http_requests_storestaffrequest_storestaffrequest_authorize",
+      "app_http_requests_storestaffrequest_storestaffrequest_rules",
+      "app_models_staff_staff",
+      "docs_requests_bak_storeorderrequest",
+      "docs_requests_bak_storeorderrequest_storeorderrequest",
+      "docs_requests_bak_storeorderrequest_storeorderrequest_authorize",
+      "docs_requests_bak_storeorderrequest_storeorderrequest_rules",
+      "illuminate_foundation_http_formrequest",
+      "scripts_simulate_store_order"
+    ],
+    "5": [
+      "app_http_controllers_admin_exchangeratecontroller",
+      "app_http_controllers_admin_exchangeratecontroller_exchangeratecontroller",
+      "app_http_controllers_admin_exchangeratecontroller_exchangeratecontroller_construct",
+      "app_http_controllers_admin_exchangeratecontroller_exchangeratecontroller_index",
+      "app_http_controllers_admin_exchangeratecontroller_exchangeratecontroller_store",
+      "app_http_controllers_api_ordercontroller",
+      "app_http_controllers_api_ordercontroller_ordercontroller",
+      "app_http_controllers_api_ordercontroller_ordercontroller_additem",
+      "app_http_controllers_api_ordercontroller_ordercontroller_current",
+      "app_models_admin",
+      "app_models_admin_admin",
+      "app_models_exchangerate",
+      "app_models_exchangerate_exchangerate",
+      "app_models_exchangerate_exchangerate_fordate",
+      "app_models_order",
+      "app_models_order_order",
+      "app_models_order_order_details",
+      "app_models_order_order_table",
+      "app_models_orderdetail",
+      "app_models_orderdetail_orderdetail",
+      "app_models_orderdetail_orderdetail_item",
+      "app_models_role",
+      "app_models_role_role",
+      "app_models_table",
+      "app_models_table_table",
+      "database_factories_userfactory",
+      "database_factories_userfactory_userfactory",
+      "database_factories_userfactory_userfactory_definition",
+      "database_factories_userfactory_userfactory_unverified",
+      "illuminate_database_eloquent_factories_factory",
+      "illuminate_database_eloquent_model",
+      "static"
+    ],
+    "6": [
+      "app_http_controllers_admin_menucontroller",
+      "app_http_controllers_admin_menucontroller_menucontroller",
+      "app_http_controllers_admin_menucontroller_menucontroller_create",
+      "app_http_controllers_admin_menucontroller_menucontroller_destroy",
+      "app_http_controllers_admin_menucontroller_menucontroller_edit",
+      "app_http_controllers_admin_menucontroller_menucontroller_index",
+      "app_http_controllers_admin_menucontroller_menucontroller_store",
+      "app_http_controllers_admin_menucontroller_menucontroller_update",
+      "app_http_controllers_admin_menuitemcontroller",
+      "app_http_controllers_admin_menuitemcontroller_menuitemcontroller",
+      "app_http_controllers_admin_menuitemcontroller_menuitemcontroller_create",
+      "app_http_controllers_admin_menuitemcontroller_menuitemcontroller_destroy",
+      "app_http_controllers_admin_menuitemcontroller_menuitemcontroller_edit",
+      "app_http_controllers_admin_menuitemcontroller_menuitemcontroller_index",
+      "app_http_controllers_admin_menuitemcontroller_menuitemcontroller_store",
+      "app_http_controllers_admin_menuitemcontroller_menuitemcontroller_update",
+      "app_http_controllers_admin_menuitemcontroller_menuitemcontroller_updateprice",
+      "app_http_requests_storemenuitemrequest",
+      "app_http_requests_storemenuitemrequest_storemenuitemrequest",
+      "app_http_requests_storemenuitemrequest_storemenuitemrequest_authorize",
+      "app_http_requests_storemenuitemrequest_storemenuitemrequest_rules",
+      "app_http_requests_storemenurequest",
+      "app_http_requests_storemenurequest_storemenurequest",
+      "app_http_requests_storemenurequest_storemenurequest_authorize",
+      "app_http_requests_storemenurequest_storemenurequest_rules",
+      "app_models_menu",
+      "app_models_menu_menu",
+      "app_models_menuitem",
+      "app_models_menuitem_menuitem",
+      "app_models_menuitem_menuitem_menu"
+    ],
+    "7": [
+      "alpinejs",
+      "autoprefixer",
+      "axios",
+      "concurrently",
+      "laravel_vite_plugin",
+      "package",
+      "package_devdependencies",
+      "package_devdependencies_alpinejs",
+      "package_devdependencies_autoprefixer",
+      "package_devdependencies_axios",
+      "package_devdependencies_concurrently",
+      "package_devdependencies_laravel_vite_plugin",
+      "package_devdependencies_postcss",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_forms",
+      "package_devdependencies_tailwindcss_vite",
+      "package_devdependencies_vite",
+      "package_private",
+      "package_schema",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_type",
+      "postcss",
+      "tailwindcss",
+      "tailwindcss_forms",
+      "tailwindcss_vite",
+      "vite"
+    ],
+    "8": [
+      "database_seeders_adminseeder",
+      "database_seeders_adminseeder_adminseeder",
+      "database_seeders_adminseeder_adminseeder_run",
+      "database_seeders_databaseseeder",
+      "database_seeders_databaseseeder_databaseseeder",
+      "database_seeders_databaseseeder_databaseseeder_run",
+      "database_seeders_menuitemseeder",
+      "database_seeders_menuitemseeder_menuitemseeder",
+      "database_seeders_menuitemseeder_menuitemseeder_run",
+      "database_seeders_menuseeder",
+      "database_seeders_menuseeder_menuseeder",
+      "database_seeders_menuseeder_menuseeder_run",
+      "database_seeders_orderdetailseeder",
+      "database_seeders_orderdetailseeder_orderdetailseeder",
+      "database_seeders_orderdetailseeder_orderdetailseeder_run",
+      "database_seeders_orderseeder",
+      "database_seeders_orderseeder_orderseeder",
+      "database_seeders_orderseeder_orderseeder_run",
+      "database_seeders_roleseeder",
+      "database_seeders_roleseeder_roleseeder",
+      "database_seeders_roleseeder_roleseeder_run",
+      "database_seeders_staffseeder",
+      "database_seeders_staffseeder_staffseeder",
+      "database_seeders_staffseeder_staffseeder_run",
+      "database_seeders_userseeder",
+      "database_seeders_userseeder_userseeder",
+      "database_seeders_userseeder_userseeder_run",
+      "illuminate_database_seeder"
+    ],
+    "9": [
+      "composer_scripts",
+      "composer_scripts_dev",
+      "composer_scripts_post_autoload_dump",
+      "composer_scripts_post_create_project_cmd",
+      "composer_scripts_post_root_package_install",
+      "composer_scripts_post_update_cmd",
+      "composer_scripts_pre_package_uninstall",
+      "composer_scripts_setup",
+      "composer_scripts_test",
+      "ref_composer_config_disableprocesstimeout",
+      "ref_composer_install",
+      "ref_illuminate_foundation_composerscripts_postautoloaddump",
+      "ref_illuminate_foundation_composerscripts_prepackageuninstall",
+      "ref_npm_install",
+      "ref_npm_run_build",
+      "ref_npx_concurrently_c_93c5fd_c4b5fd_fb7185_fdba74_php_artisan_serve_php_artisan_queue_listen_tries_1_php_artisan_pail_timeout_0_npm_run_dev_names_server_queue_logs_vite_kill_others",
+      "ref_php_artisan_config_clear_ansi",
+      "ref_php_artisan_key_generate",
+      "ref_php_artisan_key_generate_ansi",
+      "ref_php_artisan_migrate_force",
+      "ref_php_artisan_migrate_graceful_ansi",
+      "ref_php_artisan_package_discover_ansi",
+      "ref_php_artisan_test",
+      "ref_php_artisan_vendor_publish_tag_laravel_assets_ansi_force",
+      "ref_php_r_file_exists_database_database_sqlite_touch_database_database_sqlite",
+      "ref_php_r_file_exists_env_copy_env_example_env"
+    ],
+    "10": [
+      "database_migrations_2025_11_08_000001_create_tbl_admin_table",
+      "database_migrations_2025_11_08_000001_create_tbl_admin_table_createtbladmintable",
+      "database_migrations_2025_11_08_000001_create_tbl_admin_table_createtbladmintable_down",
+      "database_migrations_2025_11_08_000001_create_tbl_admin_table_createtbladmintable_up",
+      "database_migrations_2025_11_09_000001_add_staffname_to_tbl_staff",
+      "database_migrations_2025_11_09_000001_add_staffname_to_tbl_staff_addstaffnametotblstaff",
+      "database_migrations_2025_11_09_000001_add_staffname_to_tbl_staff_addstaffnametotblstaff_down",
+      "database_migrations_2025_11_09_000001_add_staffname_to_tbl_staff_addstaffnametotblstaff_up",
+      "illuminate_database_migrations_migration"
+    ],
+    "11": [
+      "app_http_controllers_admin_cleanedorderscontroller",
+      "app_http_controllers_admin_cleanedorderscontroller_cleanedorderscontroller",
+      "app_http_controllers_admin_cleanedorderscontroller_cleanedorderscontroller_construct",
+      "app_http_controllers_admin_cleanedorderscontroller_cleanedorderscontroller_destroy",
+      "app_http_controllers_admin_cleanedorderscontroller_cleanedorderscontroller_index",
+      "app_http_controllers_admin_cleanedorderscontroller_cleanedorderscontroller_print",
+      "app_http_controllers_admin_cleanedorderscontroller_cleanedorderscontroller_show",
+      "app_http_controllers_admin_cleanedorderscontroller_cleanedorderscontroller_updatepayment"
+    ],
+    "12": [
+      "app_exceptions_handler",
+      "app_exceptions_handler_handler",
+      "app_exceptions_handler_handler_register",
+      "app_exceptions_handler_handler_render",
+      "illuminate_foundation_exceptions_handler",
+      "throwable"
+    ],
+    "13": [
+      "scripts_smoke_staff_flow",
+      "scripts_smoke_staff_flow_ensure_menu_item",
+      "scripts_smoke_staff_flow_extract_csrf",
+      "scripts_smoke_staff_flow_http_get",
+      "scripts_smoke_staff_flow_http_post",
+      "scripts_smoke_staff_flow_user_id_by_email"
+    ],
+    "14": [
+      "app_console_commands_synclegacyusers",
+      "app_console_commands_synclegacyusers_synclegacyusers",
+      "app_console_commands_synclegacyusers_synclegacyusers_handle",
+      "app_console_commands_synclegacyusers_synclegacyusers_normalizepassword",
+      "illuminate_console_command"
+    ],
+    "15": [
+      "app_providers_appserviceprovider",
+      "app_providers_appserviceprovider_appserviceprovider",
+      "app_providers_appserviceprovider_appserviceprovider_boot",
+      "app_providers_appserviceprovider_appserviceprovider_register",
+      "illuminate_support_serviceprovider"
+    ],
+    "16": [
+      "app_http_middleware_ensureuserhasrole",
+      "app_http_middleware_ensureuserhasrole_ensureuserhasrole",
+      "app_http_middleware_ensureuserhasrole_ensureuserhasrole_handle",
+      "closure"
+    ],
+    "17": [
+      "database_migrations_2025_11_08_000002_create_tbl_menu_table",
+      "database_migrations_2025_11_08_000002_create_tbl_menu_table_createtblmenutable",
+      "database_migrations_2025_11_08_000002_create_tbl_menu_table_createtblmenutable_down",
+      "database_migrations_2025_11_08_000002_create_tbl_menu_table_createtblmenutable_up"
+    ],
+    "18": [
+      "database_migrations_2025_11_08_000003_create_tbl_menuitem_table",
+      "database_migrations_2025_11_08_000003_create_tbl_menuitem_table_createtblmenuitemtable",
+      "database_migrations_2025_11_08_000003_create_tbl_menuitem_table_createtblmenuitemtable_down",
+      "database_migrations_2025_11_08_000003_create_tbl_menuitem_table_createtblmenuitemtable_up"
+    ],
+    "19": [
+      "database_migrations_2025_11_08_000004_create_tbl_order_table",
+      "database_migrations_2025_11_08_000004_create_tbl_order_table_createtblordertable",
+      "database_migrations_2025_11_08_000004_create_tbl_order_table_createtblordertable_down",
+      "database_migrations_2025_11_08_000004_create_tbl_order_table_createtblordertable_up"
+    ],
+    "20": [
+      "database_migrations_2025_11_08_000005_create_tbl_orderdetail_table",
+      "database_migrations_2025_11_08_000005_create_tbl_orderdetail_table_createtblorderdetailtable",
+      "database_migrations_2025_11_08_000005_create_tbl_orderdetail_table_createtblorderdetailtable_down",
+      "database_migrations_2025_11_08_000005_create_tbl_orderdetail_table_createtblorderdetailtable_up"
+    ],
+    "21": [
+      "database_migrations_2025_11_08_000006_create_tbl_role_table",
+      "database_migrations_2025_11_08_000006_create_tbl_role_table_createtblroletable",
+      "database_migrations_2025_11_08_000006_create_tbl_role_table_createtblroletable_down",
+      "database_migrations_2025_11_08_000006_create_tbl_role_table_createtblroletable_up"
+    ],
+    "22": [
+      "database_migrations_2025_11_08_000007_create_tbl_staff_table",
+      "database_migrations_2025_11_08_000007_create_tbl_staff_table_createtblstafftable",
+      "database_migrations_2025_11_08_000007_create_tbl_staff_table_createtblstafftable_down",
+      "database_migrations_2025_11_08_000007_create_tbl_staff_table_createtblstafftable_up"
+    ],
+    "23": [
+      "database_migrations_2025_11_08_235959_add_role_to_users_table",
+      "database_migrations_2025_11_08_235959_add_role_to_users_table_addroletouserstable",
+      "database_migrations_2025_11_08_235959_add_role_to_users_table_addroletouserstable_down",
+      "database_migrations_2025_11_08_235959_add_role_to_users_table_addroletouserstable_up"
+    ],
+    "24": [
+      "phpunit_framework_testcase",
+      "tests_unit_exampletest",
+      "tests_unit_exampletest_exampletest",
+      "tests_unit_exampletest_exampletest_test_that_true_is_true"
+    ],
+    "25": [
+      "profile_partials_delete_user_form",
+      "profile_partials_update_password_form",
+      "profile_partials_update_profile_information_form",
+      "resources_views_profile_edit_blade"
+    ],
+    "26": [
+      "components_order_status_bar",
+      "layouts_navigation",
+      "resources_views_layouts_app_blade"
+    ],
+    "27": [
+      "database_migrations_0001_01_01_000000_create_users_table",
+      "database_migrations_0001_01_01_000000_create_users_table_down",
+      "database_migrations_0001_01_01_000000_create_users_table_up"
+    ],
+    "28": [
+      "database_migrations_0001_01_01_000001_create_cache_table",
+      "database_migrations_0001_01_01_000001_create_cache_table_down",
+      "database_migrations_0001_01_01_000001_create_cache_table_up"
+    ],
+    "29": [
+      "database_migrations_0001_01_01_000002_create_jobs_table",
+      "database_migrations_0001_01_01_000002_create_jobs_table_down",
+      "database_migrations_0001_01_01_000002_create_jobs_table_up"
+    ],
+    "30": [
+      "database_migrations_2025_11_08_000000_add_kitchen_cleared_to_tbl_order",
+      "database_migrations_2025_11_08_000000_add_kitchen_cleared_to_tbl_order_down",
+      "database_migrations_2025_11_08_000000_add_kitchen_cleared_to_tbl_order_up"
+    ],
+    "31": [
+      "database_migrations_2025_11_08_000001_create_sales_history_table",
+      "database_migrations_2025_11_08_000001_create_sales_history_table_down",
+      "database_migrations_2025_11_08_000001_create_sales_history_table_up"
+    ],
+    "32": [
+      "database_migrations_2025_11_08_010000_add_payment_method_to_sales_history_table",
+      "database_migrations_2025_11_08_010000_add_payment_method_to_sales_history_table_down",
+      "database_migrations_2025_11_08_010000_add_payment_method_to_sales_history_table_up"
+    ],
+    "33": [
+      "database_migrations_2025_11_08_020000_add_nombre_cedula_to_sales_history_table",
+      "database_migrations_2025_11_08_020000_add_nombre_cedula_to_sales_history_table_down",
+      "database_migrations_2025_11_08_020000_add_nombre_cedula_to_sales_history_table_up"
+    ],
+    "34": [
+      "database_migrations_2025_11_08_030000_add_reference_to_sales_history_table",
+      "database_migrations_2025_11_08_030000_add_reference_to_sales_history_table_down",
+      "database_migrations_2025_11_08_030000_add_reference_to_sales_history_table_up"
+    ],
+    "35": [
+      "database_migrations_2025_11_08_120000_add_created_by_to_tbl_order",
+      "database_migrations_2025_11_08_120000_add_created_by_to_tbl_order_down",
+      "database_migrations_2025_11_08_120000_add_created_by_to_tbl_order_up"
+    ],
+    "36": [
+      "database_migrations_2025_11_09_000000_add_username_to_users_table",
+      "database_migrations_2025_11_09_000000_add_username_to_users_table_down",
+      "database_migrations_2025_11_09_000000_add_username_to_users_table_up"
+    ],
+    "37": [
+      "database_migrations_2025_11_10_000000_add_customer_name_cedula_to_tbl_order",
+      "database_migrations_2025_11_10_000000_add_customer_name_cedula_to_tbl_order_down",
+      "database_migrations_2025_11_10_000000_add_customer_name_cedula_to_tbl_order_up"
+    ],
+    "38": [
+      "database_migrations_2025_11_15_000002_create_exchange_rates_table",
+      "database_migrations_2025_11_15_000002_create_exchange_rates_table_down",
+      "database_migrations_2025_11_15_000002_create_exchange_rates_table_up"
+    ],
+    "39": [
+      "database_migrations_2025_11_17_000001_create_tables_table",
+      "database_migrations_2025_11_17_000001_create_tables_table_down",
+      "database_migrations_2025_11_17_000001_create_tables_table_up"
+    ],
+    "40": [
+      "database_migrations_2025_11_27_000001_add_perf_indexes",
+      "database_migrations_2025_11_27_000001_add_perf_indexes_down",
+      "database_migrations_2025_11_27_000001_add_perf_indexes_up"
+    ],
+    "41": [
+      "database_migrations_2026_05_13_043456_add_payment_method_to_tbl_order_table",
+      "database_migrations_2026_05_13_043456_add_payment_method_to_tbl_order_table_down",
+      "database_migrations_2026_05_13_043456_add_payment_method_to_tbl_order_table_up"
+    ],
+    "42": [
+      "database_migrations_2026_05_13_043809_add_payment_reference_to_tbl_order_table",
+      "database_migrations_2026_05_13_043809_add_payment_reference_to_tbl_order_table_down",
+      "database_migrations_2026_05_13_043809_add_payment_reference_to_tbl_order_table_up"
+    ],
+    "43": [
+      "scripts_inspect_create_page",
+      "scripts_inspect_create_page_http_get",
+      "scripts_inspect_create_page_http_post"
+    ],
+    "44": [
+      "setup_and_start",
+      "setup_and_start_write_err",
+      "setup_and_start_write_info"
+    ],
+    "45": [
+      "artisan",
+      "routes_console"
+    ],
+    "46": [
+      "resources_js_app",
+      "resources_js_bootstrap"
+    ],
+    "47": [
+      "resources_views_staff_kitchen_index_blade",
+      "resources_views_staff_kitchen_index_blade_php_staff_orders_kds_columns"
+    ],
+    "48": [
+      "resources_views_staff_orders_index_blade",
+      "resources_views_staff_orders_index_blade_php_staff_orders_kds_columns"
+    ],
+    "49": [
+      "bootstrap_app"
+    ],
+    "50": [
+      "bootstrap_providers"
+    ],
+    "51": [
+      "config_app"
+    ],
+    "52": [
+      "config_auth"
+    ],
+    "53": [
+      "config_database"
+    ],
+    "54": [
+      "config_filesystems"
+    ],
+    "55": [
+      "config_logging"
+    ],
+    "56": [
+      "config_mail"
+    ],
+    "57": [
+      "config_queue"
+    ],
+    "58": [
+      "config_services"
+    ],
+    "59": [
+      "config_session"
+    ],
+    "60": [
+      "database_backups_create_blade_checkpoint_20251110_0001_blade"
+    ],
+    "61": [
+      "database_backups_create_blade_full_checkpoint_20251110_0001_blade"
+    ],
+    "62": [
+      "database_backups_kds_columns_full_checkpoint_20251110_0001_blade"
+    ],
+    "63": [
+      "postcss_config"
+    ],
+    "64": [
+      "public_index"
+    ],
+    "65": [
+      "resources_views_admin_cleaned_orders_index_blade"
+    ],
+    "66": [
+      "resources_views_admin_cleaned_orders_print_blade"
+    ],
+    "67": [
+      "resources_views_admin_cleaned_orders_show_blade"
+    ],
+    "68": [
+      "resources_views_admin_exchange_rate_index_blade"
+    ],
+    "69": [
+      "resources_views_admin_index_blade"
+    ],
+    "70": [
+      "resources_views_admin_menu_create_blade"
+    ],
+    "71": [
+      "resources_views_admin_menu_edit_blade"
+    ],
+    "72": [
+      "resources_views_admin_menu_index_blade"
+    ],
+    "73": [
+      "resources_views_admin_menuitem_create_blade"
+    ],
+    "74": [
+      "resources_views_admin_menuitem_edit_blade"
+    ],
+    "75": [
+      "resources_views_admin_menuitem_index_blade"
+    ],
+    "76": [
+      "resources_views_admin_staff_create_blade"
+    ],
+    "77": [
+      "resources_views_admin_staff_edit_blade"
+    ],
+    "78": [
+      "resources_views_admin_staff_index_blade"
+    ],
+    "79": [
+      "resources_views_admin_tables_index_blade"
+    ],
+    "80": [
+      "resources_views_auth_confirm_password_blade"
+    ],
+    "81": [
+      "resources_views_auth_forgot_password_blade"
+    ],
+    "82": [
+      "resources_views_auth_login_blade"
+    ],
+    "83": [
+      "resources_views_auth_register_blade"
+    ],
+    "84": [
+      "resources_views_auth_reset_password_blade"
+    ],
+    "85": [
+      "resources_views_auth_verify_email_blade"
+    ],
+    "86": [
+      "resources_views_client_board_blade"
+    ],
+    "87": [
+      "resources_views_client_terminal_blade"
+    ],
+    "88": [
+      "resources_views_components_application_logo_blade"
+    ],
+    "89": [
+      "resources_views_components_auth_session_status_blade"
+    ],
+    "90": [
+      "resources_views_components_danger_button_blade"
+    ],
+    "91": [
+      "resources_views_components_dropdown_blade"
+    ],
+    "92": [
+      "resources_views_components_dropdown_link_blade"
+    ],
+    "93": [
+      "resources_views_components_input_error_blade"
+    ],
+    "94": [
+      "resources_views_components_input_label_blade"
+    ],
+    "95": [
+      "resources_views_components_modal_blade"
+    ],
+    "96": [
+      "resources_views_components_nav_link_blade"
+    ],
+    "97": [
+      "resources_views_components_order_status_bar_blade"
+    ],
+    "98": [
+      "resources_views_components_primary_button_blade"
+    ],
+    "99": [
+      "resources_views_components_responsive_nav_link_blade"
+    ],
+    "100": [
+      "resources_views_components_secondary_button_blade"
+    ],
+    "101": [
+      "resources_views_components_text_input_blade"
+    ],
+    "102": [
+      "resources_views_dashboard_blade"
+    ],
+    "103": [
+      "resources_views_layouts_guest_blade"
+    ],
+    "104": [
+      "resources_views_layouts_navigation_blade"
+    ],
+    "105": [
+      "resources_views_profile_partials_delete_user_form_blade"
+    ],
+    "106": [
+      "resources_views_profile_partials_update_password_form_blade"
+    ],
+    "107": [
+      "resources_views_profile_partials_update_profile_information_form_blade"
+    ],
+    "108": [
+      "resources_views_staff_index_blade"
+    ],
+    "109": [
+      "resources_views_staff_kitchen_simple_blade"
+    ],
+    "110": [
+      "resources_views_staff_orders_charge_blade"
+    ],
+    "111": [
+      "resources_views_staff_orders_create_blade"
+    ],
+    "112": [
+      "resources_views_staff_orders_edit_blade"
+    ],
+    "113": [
+      "resources_views_staff_orders_kds_columns_blade"
+    ],
+    "114": [
+      "resources_views_staff_orders_kds_tiles_fragment_blade"
+    ],
+    "115": [
+      "resources_views_staff_orders_show_blade"
+    ],
+    "116": [
+      "resources_views_staff_tables_charge_blade"
+    ],
+    "117": [
+      "resources_views_staff_tables_index_blade"
+    ],
+    "118": [
+      "resources_views_staff_tables_show_blade"
+    ],
+    "119": [
+      "resources_views_welcome_blade"
+    ],
+    "120": [
+      "routes_api"
+    ],
+    "121": [
+      "scripts_check_admin_can_create"
+    ],
+    "122": [
+      "scripts_check_tbl_order_columns"
+    ],
+    "123": [
+      "scripts_count_empty_tables"
+    ],
+    "124": [
+      "scripts_create_aaron_admin"
+    ],
+    "125": [
+      "scripts_create_admin_user"
+    ],
+    "126": [
+      "scripts_delete_users_except_aaron"
+    ],
+    "127": [
+      "scripts_dump_staff"
+    ],
+    "128": [
+      "scripts_hash_plain_staff_passwords"
+    ],
+    "129": [
+      "scripts_inspect_order_table"
+    ],
+    "130": [
+      "scripts_keep_aaron_and_sync_users"
+    ],
+    "131": [
+      "scripts_normalize_staff_roles"
+    ],
+    "132": [
+      "scripts_populate_staffname"
+    ],
+    "133": [
+      "scripts_restore_orders_backup"
+    ],
+    "134": [
+      "scripts_set_order_table"
+    ],
+    "135": [
+      "scripts_test_login_attempts"
+    ],
+    "136": [
+      "scripts_update_roles"
+    ],
+    "137": [
+      "start_server"
+    ],
+    "138": [
+      "tailwind_config"
+    ],
+    "139": [
+      "vite_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.06292966684294024,
+    "1": 0.07609427609427609,
+    "2": 0.07227891156462585,
+    "3": 0.047619047619047616,
+    "4": 0.08199643493761141,
+    "5": 0.08870967741935484,
+    "6": 0.10574712643678161,
+    "7": 0.07142857142857142,
+    "8": 0.09523809523809523,
+    "9": 0.08,
+    "10": 0.2777777777777778,
+    "11": 0.25,
+    "12": 0.4,
+    "13": 0.3333333333333333,
+    "14": 0.6,
+    "15": 0.5,
+    "16": 0.6666666666666666,
+    "17": 0.5,
+    "18": 0.5,
+    "19": 0.5,
+    "20": 0.5,
+    "21": 0.5,
+    "22": 0.5,
+    "23": 0.5,
+    "24": 0.6666666666666666,
+    "25": 0.5,
+    "26": 0.6666666666666666,
+    "27": 0.6666666666666666,
+    "28": 0.6666666666666666,
+    "29": 0.6666666666666666,
+    "30": 0.6666666666666666,
+    "31": 0.6666666666666666,
+    "32": 0.6666666666666666,
+    "33": 0.6666666666666666,
+    "34": 0.6666666666666666,
+    "35": 0.6666666666666666,
+    "36": 0.6666666666666666,
+    "37": 0.6666666666666666,
+    "38": 0.6666666666666666,
+    "39": 0.6666666666666666,
+    "40": 0.6666666666666666,
+    "41": 0.6666666666666666,
+    "42": 0.6666666666666666,
+    "43": 0.6666666666666666,
+    "44": 0.6666666666666666,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
+    "53": 1.0,
+    "54": 1.0,
+    "55": 1.0,
+    "56": 1.0,
+    "57": 1.0,
+    "58": 1.0,
+    "59": 1.0,
+    "60": 1.0,
+    "61": 1.0,
+    "62": 1.0,
+    "63": 1.0,
+    "64": 1.0,
+    "65": 1.0,
+    "66": 1.0,
+    "67": 1.0,
+    "68": 1.0,
+    "69": 1.0,
+    "70": 1.0,
+    "71": 1.0,
+    "72": 1.0,
+    "73": 1.0,
+    "74": 1.0,
+    "75": 1.0,
+    "76": 1.0,
+    "77": 1.0,
+    "78": 1.0,
+    "79": 1.0,
+    "80": 1.0,
+    "81": 1.0,
+    "82": 1.0,
+    "83": 1.0,
+    "84": 1.0,
+    "85": 1.0,
+    "86": 1.0,
+    "87": 1.0,
+    "88": 1.0,
+    "89": 1.0,
+    "90": 1.0,
+    "91": 1.0,
+    "92": 1.0,
+    "93": 1.0,
+    "94": 1.0,
+    "95": 1.0,
+    "96": 1.0,
+    "97": 1.0,
+    "98": 1.0,
+    "99": 1.0,
+    "100": 1.0,
+    "101": 1.0,
+    "102": 1.0,
+    "103": 1.0,
+    "104": 1.0,
+    "105": 1.0,
+    "106": 1.0,
+    "107": 1.0,
+    "108": 1.0,
+    "109": 1.0,
+    "110": 1.0,
+    "111": 1.0,
+    "112": 1.0,
+    "113": 1.0,
+    "114": 1.0,
+    "115": 1.0,
+    "116": 1.0,
+    "117": 1.0,
+    "118": 1.0,
+    "119": 1.0,
+    "120": 1.0,
+    "121": 1.0,
+    "122": 1.0,
+    "123": 1.0,
+    "124": 1.0,
+    "125": 1.0,
+    "126": 1.0,
+    "127": 1.0,
+    "128": 1.0,
+    "129": 1.0,
+    "130": 1.0,
+    "131": 1.0,
+    "132": 1.0,
+    "133": 1.0,
+    "134": 1.0,
+    "135": 1.0,
+    "136": 1.0,
+    "137": 1.0,
+    "138": 1.0,
+    "139": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_http_controllers_controller_controller",
+      "label": "Controller",
+      "degree": 49
+    },
+    {
+      "id": "app_models_user_user",
+      "label": "User",
+      "degree": 30
+    },
+    {
+      "id": "tests_testcase_testcase",
+      "label": "TestCase",
+      "degree": 22
+    },
+    {
+      "id": "app_http_controllers_staff_ordercontroller_ordercontroller",
+      "label": "OrderController",
+      "degree": 17
+    },
+    {
+      "id": "app_http_controllers_staff_tablecontroller_tablecontroller",
+      "label": "TableController",
+      "degree": 10
+    },
+    {
+      "id": "app_http_controllers_admin_menuitemcontroller_menuitemcontroller",
+      "label": "MenuItemController",
+      "degree": 9
+    },
+    {
+      "id": "app_http_requests_auth_loginrequest_loginrequest",
+      "label": "LoginRequest",
+      "degree": 9
+    },
+    {
+      "id": "app_models_menu_menu",
+      "label": "Menu",
+      "degree": 9
+    },
+    {
+      "id": "app_models_menuitem_menuitem",
+      "label": "MenuItem",
+      "degree": 9
+    },
+    {
+      "id": "composer_require_dev",
+      "label": "require-dev",
+      "degree": 9
+    }
+  ],
+  "surprises": [
+    {
+      "source": "CleanedOrdersController",
+      "target": "Controller",
+      "source_files": [
+        "app/Http/Controllers/Admin/CleanedOrdersController.php",
+        "app/Http/Controllers/Controller.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "ExchangeRateController",
+      "target": "Controller",
+      "source_files": [
+        "app/Http/Controllers/Admin/ExchangeRateController.php",
+        "app/Http/Controllers/Controller.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "MenuController",
+      "target": "Controller",
+      "source_files": [
+        "app/Http/Controllers/Admin/MenuController.php",
+        "app/Http/Controllers/Controller.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "MenuItemController",
+      "target": "Controller",
+      "source_files": [
+        "app/Http/Controllers/Admin/MenuItemController.php",
+        "app/Http/Controllers/Controller.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "StaffController",
+      "target": "Controller",
+      "source_files": [
+        "app/Http/Controllers/Admin/StaffController.php",
+        "app/Http/Controllers/Controller.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Controller` connect `Controller` to `User`, `Illuminate\\Http\\Request`, `Illuminate\\Foundation\\Http\\FormRequest`, `Illuminate\\Database\\Eloquent\\Model`, `MenuItemController`, `CleanedOrdersController`?",
+      "why": "High betweenness centrality (0.067) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `User` connect `User` to `Controller`, `Illuminate\\Foundation\\Http\\FormRequest`?",
+      "why": "High betweenness centrality (0.033) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 25 inferred relationships involving `User` (e.g. with `.store()` and `.update()`) actually correct?",
+      "why": "`User` has 25 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `$schema`, `name`, `type` to the rest of the system?",
+      "why": "68 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `User` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06292966684294024 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Controller` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07609427609427609 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Illuminate\\Http\\Request` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07227891156462585 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

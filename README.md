@@ -1,101 +1,289 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🍽️ Aaron Bot - Sistema de Gestión de Cocina
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistema integral de gestión de órdenes y operaciones para restaurantes. Diseñado para optimizar el flujo de trabajo entre camareros, cocina y personal administrativo.
 
-## About Aaron bot
+![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?style=flat-square&logo=laravel)
+![PHP](https://img.shields.io/badge/PHP-8.2-777BB4?style=flat-square&logo=php)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.x-38B2AC?style=flat-square&logo=tailwind-css)
 
-Aaron bot is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Aaron bot takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📋 Descripción
 
-## Arquitectura técnica de Aaron bot
+**Aaron Bot** es una aplicación web moderna para la gestión completa de restaurantes y establecimientos de comida. Facilita la comunicación en tiempo real entre el personal de servicio, la cocina y el área administrativa, permitiendo:
 
-Aaron bot está construido sobre Laravel 12 y PHP 8.2, con el esqueleto estándar de Laravel y una mezcla de componentes modernos y tablas legacy.
+- Creación y seguimiento de órdenes
+- Gestión de mesas y clientes
+- Control de inventario y menú
+- KDS (Kitchen Display System) integrado
+- Dashboard de métricas y ventas
+- Gestión de usuarios con roles diferenciados
 
-### Puntos clave de implementación
+---
 
-- Autenticación y autorización gestionadas con Laravel Breeze / Laravel auth.
-- Middleware personalizado `App\Http\Middleware\EnsureUserHasRole` para controlar roles: `admin`, `mesero`, `cocina_barra`.
-- Rutas agrupadas por prefijo y nombre en `routes/web.php` para separar claramente las áreas de `admin` y `staff`.
-- Gestión de órdenes y mesas dentro de `app/Http/Controllers/Staff/` y administración en `app/Http/Controllers/Admin/`.
-- Lógica de negocio que combina Eloquent con consultas directas mediante `DB::table(...)`, especialmente para trabajar con tablas legacy como `tbl_order`, `tbl_orderdetail`, `tbl_menuitem`, `sales_history` y `tables`.
+## 🎯 Características Principales
 
-### Flujo principal de la aplicación
+### Para Personal de Cocina
+- **KDS en Tiempo Real**: Pantalla de visualización de órdenes pendientes
+- **Priorización Automática**: Marcado de órdenes por estado de cocina
+- **Historial de Pedidos**: Acceso a órdenes completadas del día
 
-- `admin` gestiona menú, items de menú, personal y órdenes archivadas.
-- `staff` crea, edita y consulta órdenes, calcula totales, maneja estado de cocina y cobra mesas.
-- Las órdenes activas permanecen en `tbl_order`, mientras que las ventas cerradas se archivan en `sales_history`.
-- El estado de `kitchen` se actualiza con endpoints especializados y la vista KDS usa sesiones para ocultar temporalmente pedidos.
-- Hay endpoints en tiempo real con caché de 1 segundo (`orders-counts`, `orders-metrics`) para dashboards activos.
+### Para Camareros/Meseros
+- **Gestión de Mesas**: Crear, editar y consultar órdenes activas
+- **Cálculo de Totales**: Sistema automático de precios y descuentos
+- **Cobro de Mesas**: Procesar pagos y generar recibos
+- **Estado de Órdenes**: Seguimiento en tiempo real de cocina
 
-### Modelo de datos y validación
+### Para Administración
+- **Panel de Control**: Dashboards con métricas de ventas
+- **Gestión de Menú**: CRUD completo de artículos y categorías
+- **Gestión de Personal**: Usuarios, roles y permisos
+- **Historial de Ventas**: Reportes archivados y análisis
+- **Tipo de Cambio**: Gestión de moneda para pagos internacionales
 
-- Modelos Eloquent como `Order`, `OrderDetail`, `Menu`, `MenuItem`, `Table`, `ExchangeRate` existen, pero muchas operaciones usan query builder para compatibilidad con el esquema legacy.
-- Las solicitudes críticas usan `FormRequest` para validación, por ejemplo `StoreOrderRequest`, `StoreMenuRequest`, `StoreMenuItemRequest`.
-- `StoreOrderRequest` normaliza entradas legacy como `customer_table` a `table_number` antes de validar.
+---
 
-### Tecnologías y herramientas
+## 🏗️ Arquitectura Técnica
 
-- Laravel 12
-- PHP 8.2
-- Vite + Tailwind CSS (según configuración de `vite.config.js` y `tailwind.config.js`)
-- Composer para dependencias PHP
-- NPM para assets y frontend
+### Stack Tecnológico
+- **Backend**: Laravel 12 con PHP 8.2
+- **Frontend**: Blade, Tailwind CSS, Vite
+- **Base de Datos**: MySQL/MariaDB (compatible con esquemas legacy)
+- **Package Manager**: Composer (PHP) y NPM (Frontend)
 
-### Mejoras recomendadas
+### Estructura del Proyecto
+```
+bot-aaron/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Admin/              # Controladores administrativos
+│   │   │   ├── Staff/              # Controladores de personal
+│   │   │   └── Middleware/         # Middleware de autenticación y roles
+│   │   └── Requests/               # Form Requests de validación
+│   ├── Models/                     # Modelos Eloquent
+│   └── Services/                   # Servicios de negocio
+├── routes/
+│   └── web.php                     # Definición de rutas
+├── resources/
+│   ├── views/                      # Plantillas Blade
+│   └── css/                        # Estilos y Tailwind
+├── database/
+│   ├── migrations/                 # Migraciones de BD
+│   └── seeds/                      # Datos iniciales
+├── public/                         # Assets compilados
+└── config/                         # Configuración de aplicación
+```
 
-- Migrar más lógica de negocio fuera de rutas y controladores hacia servicios o repositorios.
-- Reforzar el uso de Eloquent y relaciones en lugar de consultas directas constantes con `DB::table(...)`.
-- Consolidar la gestión de datos legacy (`tbl_order`, `tbl_orderdetail`, `tbl_menuitem`, `sales_history`) en modelos y adaptadores de datos.
-- Añadir pruebas funcionales para flujos de órdenes, cobro de mesas y control de roles.
-- Centralizar la validación y garantizar que todos los endpoints críticos usen `FormRequest`.
+### Componentes Clave
 
-Laravel es accesible, poderoso y proporciona herramientas requeridas para aplicaciones grandes y robustas.
+#### Autenticación y Autorización
+- Laravel Breeze para autenticación
+- Middleware personalizado `EnsureUserHasRole` para control de acceso
+- Roles: `admin`, `mesero`, `cocina_barra`
 
-## Learning Laravel
+#### Gestión de Órdenes
+- Modelos: `Order`, `OrderDetail`, `MenuItem`, `Menu`
+- Validación con `StoreOrderRequest`
+- Normalización de datos legacy
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+#### Datos Legacy
+- Compatibilidad con tablas existentes: `tbl_order`, `tbl_orderdetail`, `tbl_menuitem`
+- Archivado en `sales_history`
+- Query Builder para operaciones complejas
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Endpoints en Tiempo Real
+- `orders-counts`: Contador de órdenes (caché 1s)
+- `orders-metrics`: Métricas de cocina (caché 1s)
+- Sesiones para ocultar temporalmente pedidos en KDS
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🚀 Instalación y Configuración
 
-### Premium Partners
+### Requisitos Previos
+- PHP 8.2 o superior
+- Composer
+- Node.js 18+ y NPM
+- MySQL 8.0+ o MariaDB 10.4+
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Pasos de Instalación
 
-## Contributing
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/aarfigo/bot-aaron.git
+cd bot-aaron
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. **Instalar dependencias PHP**
+```bash
+composer install
+```
 
-## Code of Conduct
+3. **Instalar dependencias de Node**
+```bash
+npm install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. **Configurar el archivo .env**
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-## Security Vulnerabilities
+5. **Ejecutar migraciones**
+```bash
+php artisan migrate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. **Compilar assets**
+```bash
+npm run dev        # Desarrollo
+npm run build      # Producción
+```
 
-## License
+7. **Iniciar el servidor**
+```bash
+php artisan serve
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Acceder a: `http://localhost:8000`
+
+### Scripts PowerShell (Windows)
+```powershell
+# Configuración e inicio
+.\setup-and-start.ps1
+
+# Solo iniciar servidor
+.\start-server.ps1
+```
+
+---
+
+## 📖 Guía de Uso
+
+### Panel de Administrador
+Acceder con credenciales administrativas para:
+- Configurar menú y artículos
+- Gestionar personal y roles
+- Revisar reportes de ventas
+- Configurar parámetros del sistema
+
+### Panel de Mesero
+Crear y gestionar órdenes:
+1. Seleccionar mesa o crear nueva orden
+2. Agregar artículos del menú
+3. Aplicar descuentos si aplica
+4. Procesar cobro
+
+### Kitchen Display System (KDS)
+- Vista en tiempo real de órdenes pendientes
+- Marcar artículos como preparados
+- Priorización automática por tipo de cocina
+- Alertas de órdenes con demora
+
+---
+
+## 🔌 API Endpoints
+
+### Órdenes
+```
+GET    /api/orders               # Listar órdenes
+POST   /api/orders               # Crear orden
+GET    /api/orders/{id}          # Obtener detalle
+PUT    /api/orders/{id}          # Actualizar orden
+DELETE /api/orders/{id}          # Eliminar orden
+```
+
+### Menú
+```
+GET    /api/menu                 # Listar menú
+GET    /api/menu/{id}            # Obtener artículo
+POST   /admin/menu               # Crear artículo (admin)
+PUT    /admin/menu/{id}          # Actualizar artículo (admin)
+```
+
+### Métricas en Tiempo Real
+```
+GET    /api/orders-counts        # Contador de órdenes
+GET    /api/orders-metrics       # Métricas de cocina
+```
+
+---
+
+## 🧪 Testing
+
+Ejecutar pruebas unitarias y funcionales:
+
+```bash
+php artisan test
+```
+
+Ver cobertura de pruebas:
+```bash
+php artisan test --coverage
+```
+
+Consultar `README_TESTING.md` para más detalles.
+
+---
+
+## 📊 Plan de Migración
+
+El proyecto incluye un `MIGRATION_PLAN.md` que detalla:
+- Pasos para migrar datos legacy
+- Estrategia de compatibilidad con esquema antiguo
+- Timeline estimado
+
+---
+
+## 🛠️ Desarrollo y Contribución
+
+### Estructura de Ramas
+- `main`: Versión estable en producción
+- `develop`: Rama de desarrollo
+- `feature/*`: Nuevas características
+- `bugfix/*`: Correcciones de errores
+
+### Estilo de Código
+- PSR-12 para PHP
+- EditorConfig incluido (`.editorconfig`)
+- Validación automática en commits
+
+### Mejoras Recomendadas
+1. Migrar más lógica a servicios/repositorios
+2. Aumentar cobertura de pruebas funcionales
+3. Reforzar uso de Eloquent en lugar de Query Builder
+4. Consolidar adaptadores para datos legacy
+5. Centralizar validación en FormRequests
+
+---
+
+## 📝 Licencia
+
+Este proyecto está bajo la licencia MIT. Ver archivo `LICENSE` para más detalles.
+
+---
+
+## 👥 Autor
+
+**aarfigo** - [GitHub Profile](https://github.com/aarfigo)
+
+---
+
+## 🤝 Soporte
+
+Para reportar bugs o solicitar características:
+- Abrir un [Issue](https://github.com/aarfigo/bot-aaron/issues)
+- Consultar la [Documentación](./docs/)
+- Revisar [Pull Requests](https://github.com/aarfigo/bot-aaron/pulls)
+
+---
+
+## 📞 Contacto
+
+Para consultas sobre el proyecto o colaboraciones, contactar al desarrollador a través de GitHub.
+
+---
+
+**Última actualización**: Julio 2026 | Versión: 1.0.0
